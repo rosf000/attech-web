@@ -1,0 +1,74 @@
+{ "ink": {
+    "jsonPath": "inks.json",
+    "titleZh": "Energy Curable Inks & OPVs 工業塗料智能選型系統",
+    "titleEn": "Energy Curable Inks & OPVs Solution Selector",
+    "categoryMap": {
+      "PTFE Altinative": ["MP-28AL", "MPP-611AL", "MicroKlear 418AL", "Superslip 6515AL", "PolyGlide 1226XF", "SuperGlide 1231", "PolyTuf 1229"],
+      "耐刮": ["Aquapoly 511","Polysilk 750","MP-22XF"],
+      "耐磨": ["MPP-635VF","MPP-620VF","MPP-620XF"],
+      "高光澤": ["MicroKlear 116","Micromide 520"],
+      "消光": ["PropylMatte 31","PropylMatte 31 HD","MicroMatte 1415-EZ","Micropro 400"],
+      "柔感": ["MicroTouch 800XF", "MicroTouch 800F"]
+    },
+    "ratingKeyMap": {
+      "ptfe_alternative": "ptfe_alternative",
+      "scratch_resistance": "Scratch_Resistance",
+      "abrasion_resistance": "Abrasion_Resistance",
+      "anti_gassing": "Anti_Gassing",
+      "block_resistance": "Block_Resistance",
+      "matting_gloss_control": "Matting_and_Gloss_Control",
+      "slip_lubricity": "Slip_and_Lubricity",
+      "texture_structure": "Texture_and_Structure"
+    }
+  },
+  "industrial": {
+    "jsonPath": "industrial coatings.json",
+    "titleZh": "Industrial Coating 工業塗料智能選型系統",
+    "titleEn": "Industrial Coating Solution Selector",
+    "categoryMap": {
+      "PTFE Altinative": ["MP-28AL", "MPP-611AL", "MicroKlear 418AL", "Superslip 6515AL", "PolyGlide 1226XF", "SuperGlide 1231", "PolyTuf 1229"],
+      "耐刮": ["Aquapoly 511","Aquapoly 250","Polysilk 750","MP-22XF"],
+      "耐磨": ["MPP-611XF","MPP-620VF","MPP-620XF"],
+      "高光澤": ["MicroKlear 116", "MicroKlear 418","Micromide 520"],
+      "消光": ["PropylMatte 31","PropylMatte 31 HD","Micropro 440W"],
+      "織紋": ["Propyltex 100S", "Propyltex 140S", "Propyltex 200S", "Propyltex 200SF", "Propyltex 270S", "Propyltex 270S-1518", "Propyltex 325S", "Propyltex 50", "Propyltex 20", "NyloTex 50", "NyloTex 100", "NyloTex 140", "NyloTex 200"],
+      "柔感": ["MicroTouch 800XF", "MicroTouch 800F"]
+    },
+    "ratingKeyMap": {
+      "ptfe_alternative": "ptfe_alternative",
+      "scratch_resistance": "Scratch_Resistance",
+      "abrasion_resistance": "Abrasion_Resistance",
+      "anti_gassing": "Anti_Gassing",
+      "block_resistance": "Block_Resistance",
+      "matting_gloss_control": "Matting_and_Gloss_Control",
+      "slip_lubricity": "Slip_and_Lubricity",
+      "texture_structure": "Texture_and_Structure"
+    }
+  },
+  "powder": {
+    "jsonPath": "powder coatings.json",
+    "titleZh": "Powder Coating 粉體塗料智能選型系統",
+    "titleEn": "Powder Coating Solution Selector",
+    "categoryMap": {
+      "PTFE Altinative": ["MP-28AL", "MPP-611AL", "MicroKlear 418AL", "Superslip 6515AL", "PolyGlide 1226XF", "SuperGlide 1231", "PolyTuf 1229"],
+      "耐刮": ["MP-22VF", "MP-22XF"],
+      "耐磨": ["MPP-611XF", "MPP-620VF", "MPP-635VF"],
+      "高光澤": ["Micromide 520"],
+      "消光": ["PropylMatte 31", "Micropro 400"],
+      "防腐蝕": ["GraphShield 730"],
+      "織紋": ["MicroTex 580", "MicroTex 950"],
+      "柔感": ["MicroTouch 800XF", "MicroTouch 800F"]
+    },
+    "ratingKeyMap": {
+      "ptfe_alternative": "ptfe_alternative",
+      "scratch_resistance": "scratch_resistance",
+      "abrasion_resistance": "abrasion_resistance",
+      "anti_gassing": "anti_gassing",
+      "block_resistance": "block_resistance",
+      "matting_gloss_control": "matting_gloss_control",
+      "slip_lubricity": "slip_lubricity",
+      "texture_structure": "texture_structure",
+      "corrosion_resistance": "corrosion_resistance"
+    }
+  }
+}

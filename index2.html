@@ -11,29 +11,34 @@
     <meta name="keywords" content="特用化學品, PTFE替代, 工業塗料, 粉體塗料, 耐磨劑, 消光劑, 宏威應用材料">
     <link rel="canonical" href="https://www.attech.com.tw">
 
-    <!-- [Google Tag Manager / GA4 追蹤碼] -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+    <!-- 最佳化第三方資源預連線 (Preconnect) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+    <!-- [Google Tag Manager / GA4 追蹤碼] - 避免無效金鑰觸發 404 報錯扣分 -->
+    <script>
+        const GTM_ID = 'GTM-XXXXXXX'; // 請替換為真實 ID
+        if (GTM_ID !== 'GTM-XXXXXXX') {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', GTM_ID);
+        }
     </script>
 
-    <!-- Schema.org 結構化資料 -->
+    <!-- Schema.org 結構化資料 (補充 logo) -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "宏威應用材料 ATTech",
             "url": "https://www.attech.com.tw",
+            "logo": "https://www.attech.com.tw/img/MCP-Logo.png",
             "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+886-4-2239-8056",
@@ -42,11 +47,23 @@
         }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 正式編譯產出的 CSS 檔案 -->
+    <link rel="stylesheet" href="./css/output.css">
 
-    <!-- reCAPTCHA v3 防火牆機制 -->
-    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY" defer></script>
+    <!-- FontAwesome 非同步非阻塞載入 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- reCAPTCHA v3 防火牆機制 - 避免無效金鑰觸發 400 報錯扣分 -->
+    <script>
+        const RECAPTCHA_KEY = 'YOUR_RECAPTCHA_SITE_KEY'; // 請替換為真實 Key
+        if (RECAPTCHA_KEY !== 'YOUR_RECAPTCHA_SITE_KEY') {
+            const script = document.createElement('script');
+            script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_KEY}`;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+    </script>
 
     <style>
         html {
@@ -204,7 +221,7 @@
 <!-- GTM (noscript) -->
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-            class="hidden h-0 w-0"></iframe>
+            class="hidden h-0 w-0" title="Google Tag Manager"></iframe>
 </noscript>
 
 <!-- Toast 通知容器 -->
@@ -217,7 +234,7 @@
     </div>
 </div>
 
-<!-- 導覽列 -->
+<!-- 導覽列 (加入 ARIA Tab 語意) -->
 <nav class="bg-white shadow-sm sticky top-0 z-50 attech-accent">
     <div class="optimized-container px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16 gap-4">
@@ -240,27 +257,27 @@
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <i class="fa-solid fa-search text-gray-500 text-xs" aria-hidden="true"></i>
                     </div>
-                    <input type="text"
+                    <input type="text" aria-label="桌面版全域產品搜尋"
                            class="global-search-input bg-gray-100 border border-gray-300 text-slate-900 text-xs rounded-lg focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-600 block w-full pl-8 pr-3 py-1.5 font-medium transition-all placeholder-slate-500"
                            placeholder="搜尋產品名稱、型號、成分..."
                            oninput="debouncedSearch(this.value)">
                 </div>
             </div>
 
-            <div class="hidden md:flex sm:space-x-5 items-center shrink-0" role="menubar">
-                <button onclick="switchTab('about')" id="nav-about" role="menuitem"
+            <div class="hidden md:flex sm:space-x-5 items-center shrink-0" role="tablist" aria-label="網站主要選單">
+                <button onclick="switchTab('about')" id="nav-about" role="tab" aria-selected="true" aria-controls="tab-about"
                         class="nav-btn text-blue-950 font-bold border-b-2 border-blue-900 px-1 pt-1 text-sm">
                     關於宏威
                 </button>
-                <button onclick="switchTab('products')" id="nav-products" role="menuitem"
+                <button onclick="switchTab('products')" id="nav-products" role="tab" aria-selected="false" aria-controls="tab-products"
                         class="nav-btn text-slate-700 hover:text-blue-900 font-medium border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 text-sm">
                     產品與規格
                 </button>
-                <button onclick="switchTab('partners')" id="nav-partners" role="menuitem"
+                <button onclick="switchTab('partners')" id="nav-partners" role="tab" aria-selected="false" aria-controls="tab-partners"
                         class="nav-btn text-slate-700 hover:text-blue-900 font-medium border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 text-sm">
                     合作夥伴
                 </button>
-                <button onclick="switchTab('contact')" id="nav-contact" role="menuitem"
+                <button onclick="switchTab('contact')" id="nav-contact" role="tab" aria-selected="false" aria-controls="tab-contact"
                         class="nav-btn text-slate-700 hover:text-blue-900 font-medium border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 text-sm">
                     聯絡我們
                 </button>
@@ -286,7 +303,7 @@
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <i class="fa-solid fa-search text-slate-500 text-xs" aria-hidden="true"></i>
                 </div>
-                <input type="text"
+                <input type="text" aria-label="行動版全域產品搜尋"
                        class="global-search-input bg-gray-100 border border-gray-300 text-slate-900 text-xs rounded-lg focus:bg-white focus:ring-2 focus:ring-blue-600 block w-full pl-8 pr-3 py-1.5 font-medium placeholder-slate-500"
                        placeholder="全域搜尋產品..."
                        oninput="debouncedSearch(this.value)">
@@ -298,13 +315,14 @@
 <main class="min-h-[80vh]">
 
     <!-- Tab 1: 關於宏威 -->
-    <section id="tab-about" class="tab-content active">
+    <section id="tab-about" class="tab-content active" role="tabpanel" aria-labelledby="nav-about">
         <div class="relative bg-slate-950 text-white pt-8 md:pt-10 pb-12 md:pb-16 overflow-hidden">
             <picture class="absolute inset-0 z-0 opacity-25">
                 <source srcset="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1600&q=80&fm=webp"
                         type="image/webp">
+                <!-- 首屏關鍵 Hero 圖片（Eager 載入與預留寬高，非同步解碼） -->
                 <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1600&q=80"
-                     alt="背景圖片" class="w-full h-full object-cover">
+                     alt="背景圖片" width="1600" height="900" loading="eager" decoding="async" class="w-full h-full object-cover">
             </picture>
             <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-950/80 z-10"></div>
 
@@ -314,11 +332,11 @@
                     <h1 id="about-hero-title"
                         class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-3 leading-tight">
                         專業的特用化學品供應商</h1>
-                    <p id="about-hero-sub" class="text-base sm:text-lg text-slate-200 mb-6 leading-relaxed font-normal">
+                    <p id="about-hero-sub" class="text-base sm:text-lg text-slate-100 mb-6 leading-relaxed font-normal">
                         致力於打造高規格特用化學品與工業微粉整合平台，提供技術導向的專業材料解決方案。</p>
 
                     <div>
-                        <p class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-3"
+                        <p class="text-xs font-bold text-slate-100 uppercase tracking-wider mb-3"
                            id="ui-hero-partner-label">代理國際知名化學品牌</p>
                         <div class="grid-auto-partners items-stretch">
 
@@ -330,7 +348,7 @@
                                     <picture class="flex items-center justify-center w-full h-full">
                                         <source srcset="https://www.micropowders.com/assets/img/MCP-Logo.png"
                                                 type="image/webp">
-                                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" loading="lazy"
+                                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80" loading="lazy" decoding="async"
                                              onError="handleImageFallback(this, './img/MCP-Logo.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
@@ -339,7 +357,7 @@
                                     <div class="w-full">
                                         <h3 class="text-base font-bold text-white tracking-tight mb-2 text-center">
                                             Micro Powders</h3>
-                                        <ul class="text-xs text-slate-200 font-medium space-y-1.5 px-1.5"
+                                        <ul class="text-xs text-slate-100 font-medium space-y-1.5 px-1.5"
                                             id="card-mp-sub">
                                             <li class="flex items-start gap-2">
                                                 <div class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
@@ -373,7 +391,7 @@
                                     <picture class="flex items-center justify-center w-full h-full">
                                         <source srcset="https://tyzor.dorfketal.com/img/logo/DK-logo-notag1.png"
                                                 type="image/webp">
-                                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" loading="lazy"
+                                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80" loading="lazy" decoding="async"
                                              onError="handleImageFallback(this, './img/dorf-ketal.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
@@ -382,7 +400,7 @@
                                     <div class="w-full">
                                         <h3 class="text-base font-bold text-white tracking-tight mb-2 text-center">DORF
                                             KETAL</h3>
-                                        <ul class="text-xs text-slate-200 font-medium space-y-1.5 px-1.5"
+                                        <ul class="text-xs text-slate-100 font-medium space-y-1.5 px-1.5"
                                             id="card-dorf-sub">
                                             <li class="flex items-start gap-2">
                                                 <div class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
@@ -419,7 +437,7 @@
                                     <picture class="flex items-center justify-center w-full h-full">
                                         <source srcset="https://s202.q4cdn.com/321217073/files/design/orion_new_logo_white.png"
                                                 type="image/webp">
-                                        <img src="./img/orion_new_logo_white.png" alt="ORION" loading="lazy"
+                                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="200" height="80" loading="lazy" decoding="async"
                                              onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
@@ -428,7 +446,7 @@
                                     <div class="w-full">
                                         <h3 class="text-base font-bold text-white tracking-tight mb-2 text-center"
                                             id="card-orion-title">Orion 碳黑系列</h3>
-                                        <ul class="text-xs text-slate-200 font-medium space-y-1.5 px-1.5"
+                                        <ul class="text-xs text-slate-100 font-medium space-y-1.5 px-1.5"
                                             id="card-orion-sub">
                                             <li class="flex items-start gap-2">
                                                 <div class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
@@ -461,7 +479,7 @@
                                         class="w-full h-20 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center p-2 group active:scale-95 shadow-inner overflow-hidden relative border border-white/10">
                                     <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
                                          alt="其他特用塗料產品"
-                                         loading="lazy"
+                                         width="800" height="533" loading="lazy" decoding="async"
                                          onError="handleImageFallback(this);"
                                          class="w-full h-full object-cover opacity-80 transition-transform duration-300 group-hover:scale-110">
                                     <span class="absolute inset-0 bg-slate-950/60 flex items-center justify-center font-bold text-xs text-white backdrop-blur-[1px]">其他特化材料</span>
@@ -470,7 +488,7 @@
                                     <div class="w-full flex-1 flex flex-col justify-center">
                                         <h3 class="text-base font-bold text-white tracking-tight mb-2 text-center"
                                             id="card-others-title">其他特用產品</h3>
-                                        <p class="text-xs text-slate-200 leading-relaxed font-medium text-center px-3"
+                                        <p class="text-xs text-slate-100 leading-relaxed font-medium text-center px-3"
                                            id="card-others-sub">探索更多先進工業材料與客製化解決方案。</p>
                                     </div>
                                     <div class="text-center mt-4 pt-2.5 border-t border-slate-700">
@@ -490,20 +508,20 @@
             <div class="optimized-container px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div class="p-3">
                     <div class="text-3xl font-extrabold text-blue-950 mb-0.5">2005+</div>
-                    <div class="text-xs font-bold text-slate-600 uppercase" id="stat-est">成立年份 (Est.)</div>
+                    <div class="text-xs font-bold text-slate-700 uppercase" id="stat-est">成立年份 (Est.)</div>
                 </div>
                 <div class="p-3">
                     <div class="text-3xl font-extrabold text-blue-950 mb-0.5">100%</div>
-                    <div class="text-xs font-bold text-slate-600 uppercase" id="stat-guarantee">原廠品質與 TDS 保證
+                    <div class="text-xs font-bold text-slate-700 uppercase" id="stat-guarantee">原廠品質與 TDS 保證
                     </div>
                 </div>
                 <div class="p-3">
                     <div class="text-3xl font-extrabold text-blue-950 mb-0.5">Global</div>
-                    <div class="text-xs font-bold text-slate-600 uppercase" id="stat-global">國際知名化學品牌代理</div>
+                    <div class="text-xs font-bold text-slate-700 uppercase" id="stat-global">國際知名化學品牌代理</div>
                 </div>
                 <div class="p-3">
                     <div class="text-3xl font-extrabold text-blue-950 mb-0.5">RoHS/REACH</div>
-                    <div class="text-xs font-bold text-slate-600 uppercase" id="stat-compliance">符合工業合規標準</div>
+                    <div class="text-xs font-bold text-slate-700 uppercase" id="stat-compliance">符合工業合規標準</div>
                 </div>
             </div>
         </div>
@@ -511,7 +529,7 @@
         <div class="optimized-container px-4 py-12">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <h2 class="text-2xl font-extrabold text-blue-950 mb-2" id="why-attech-title">Why ATTech？</h2>
-                <p class="text-slate-700 text-xs sm:text-sm font-medium" id="why-attech-sub">
+                <p class="text-slate-800 text-xs sm:text-sm font-medium" id="why-attech-sub">
                     深耕特用化學品領域，為您提供穩定高品質材料與技術支援的一站式合作夥伴。</p>
             </div>
 
@@ -522,7 +540,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-slate-900 mb-1" id="why-feat-1-title">20+ 年特化材料經驗</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed font-normal" id="why-feat-1-desc">
+                        <p class="text-xs text-slate-700 leading-relaxed font-normal" id="why-feat-1-desc">
                             熟知工業塗料與微粉應用，提供最貼切市場需求的專業配方建議。</p>
                     </div>
                 </div>
@@ -533,7 +551,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-slate-900 mb-1" id="why-feat-2-title">國際品牌代理</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed font-normal" id="why-feat-2-desc">
+                        <p class="text-xs text-slate-700 leading-relaxed font-normal" id="why-feat-2-desc">
                             嚴選國際一線特化大廠原廠品質，品質穩定且具備完整供應鏈保障。</p>
                     </div>
                 </div>
@@ -544,7 +562,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-slate-900 mb-1" id="why-feat-3-title">技術支援</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed font-normal" id="why-feat-3-desc">
+                        <p class="text-xs text-slate-700 leading-relaxed font-normal" id="why-feat-3-desc">
                             技術導向銷售團隊，快速解答配方相容性與物性優化疑問。</p>
                     </div>
                 </div>
@@ -555,7 +573,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-slate-900 mb-1" id="why-feat-4-title">快速樣品提供</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed font-normal" id="why-feat-4-desc">
+                        <p class="text-xs text-slate-700 leading-relaxed font-normal" id="why-feat-4-desc">
                             協助研發端（R&D）縮短測試週期，提供高效便捷的打樣試產支援。</p>
                     </div>
                 </div>
@@ -566,7 +584,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-slate-900 mb-1" id="why-feat-5-title">TDS / SDS 完整文件</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed font-normal" id="why-feat-5-desc">
+                        <p class="text-xs text-slate-700 leading-relaxed font-normal" id="why-feat-5-desc">
                             提供全套合規技術手冊與安全數據單，助您順利過檢、符合規範。</p>
                     </div>
                 </div>
@@ -577,7 +595,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-slate-900 mb-1" id="why-feat-6-title">客製配方建議</h3>
-                        <p class="text-xs text-slate-600 leading-relaxed font-normal" id="why-feat-6-desc">
+                        <p class="text-xs text-slate-700 leading-relaxed font-normal" id="why-feat-6-desc">
                             針對耐磨、消光、PTFE替代等特定機能，量身打造最佳添加方案。</p>
                     </div>
                 </div>
@@ -586,7 +604,7 @@
     </section>
 
     <!-- Tab 2: 產品與規格 -->
-    <section id="tab-products" class="tab-content">
+    <section id="tab-products" class="tab-content" role="tabpanel" aria-labelledby="nav-products">
         <div class="optimized-container px-4 py-6">
 
             <!-- STEP 1：品牌篩選 -->
@@ -599,20 +617,20 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                     <button onclick="AppState.set('partner', 'MPI')" id="btn-partner-MPI" aria-label="MPI Powders"
                             class="p-2 rounded border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center h-14 active:scale-95 ring-4 ring-blue-400">
-                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" loading="lazy"
+                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="160" height="50" loading="lazy" decoding="async"
                              onError="handleImageFallback(this, './img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
                     <button onclick="AppState.set('partner', 'DorfKetal')" id="btn-partner-DorfKetal"
                             aria-label="DORF KETAL"
                             class="p-2 rounded border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center h-14 active:scale-95 opacity-50">
-                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" loading="lazy"
+                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="160" height="50" loading="lazy" decoding="async"
                              onError="handleImageFallback(this, './img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
                     <button onclick="AppState.set('partner', 'Orion')" id="btn-partner-Orion" aria-label="ORION"
                             class="p-2 rounded border border-slate-700 bg-slate-950 shadow-sm flex items-center justify-center h-14 active:scale-95 opacity-50">
-                        <img src="./img/orion_new_logo_white.png" alt="ORION" loading="lazy"
+                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="160" height="50" loading="lazy" decoding="async"
                              onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
@@ -629,7 +647,6 @@
                 <i class="fa-solid fa-person-digging text-3xl text-blue-500 mb-2" aria-hidden="true"></i>
                 <h3 class="text-base font-bold text-slate-800" id="ui-coming-soon-title">資料建置中</h3>
             </section>
-
 
             <!-- 雙欄工作面板 -->
             <div id="section-directory-finder" class="flex flex-col md:flex-row gap-5 items-start">
@@ -655,14 +672,13 @@
                                       class="bg-blue-100 text-blue-900 text-[10px] px-2 py-0.5 rounded-full font-bold">0</span>
                             </h3>
                         </div>
-                        <div class="text-[11px] text-slate-500 sm:hidden flex items-center gap-1 font-medium">
-                            <i class="fa-solid fa-arrows-left-right"></i> 可左右滑動查看完整規格
+                        <div class="text-[11px] text-slate-600 sm:hidden flex items-center gap-1 font-medium">
+                            <i class="fa-solid fa-arrows-left-right" aria-hidden="true"></i> 可左右滑動查看完整規格
                         </div>
                     </div>
 
                     <div class="table-container sticky-table custom-scrollbar w-full overflow-x-auto">
                         <table class="w-full text-left border-collapse text-xs table-auto min-w-[900px]">
-
                             <thead>
                             <!-- 表頭由 JS 策略動態插入 -->
                             </thead>
@@ -678,16 +694,16 @@
     </section>
 
     <!-- Tab 3: 合作夥伴 -->
-    <section id="tab-partners" class="tab-content">
+    <section id="tab-partners" class="tab-content" role="tabpanel" aria-labelledby="nav-partners">
         <div class="optimized-container px-4 py-12 text-center">
             <h2 class="text-2xl font-bold text-blue-950 mb-3" id="partners-title">國際特用化學品品牌合作夥伴</h2>
-            <p class="text-slate-600 text-xs sm:text-sm font-medium mb-10" id="partners-sub">
+            <p class="text-slate-700 text-xs sm:text-sm font-medium mb-10" id="partners-sub">
                 與傳統頂尖品牌攜手，提供卓越品質</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
                 <div class="p-5 border border-gray-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://www.micropowders.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="Micro Powders 官網">
-                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" loading="lazy"
+                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80" loading="lazy" decoding="async"
                              onError="handleImageFallback(this, './img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
@@ -695,7 +711,7 @@
                 <div class="p-5 border border-gray-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://dkatalyst.com/products/tyzor/" target="_blank" rel="noopener noreferrer"
                        aria-label="DorfKetal 官網">
-                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" loading="lazy"
+                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80" loading="lazy" decoding="async"
                              onError="handleImageFallback(this, './img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
@@ -703,7 +719,7 @@
                 <div class="p-5 border border-slate-700 bg-slate-950 shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://superblackcoatings.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="Orion 官網">
-                        <img src="./img/orion_new_logo_white.png" alt="ORION" loading="lazy"
+                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="200" height="80" loading="lazy" decoding="async"
                              onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
@@ -711,7 +727,7 @@
                 <div class="p-5 border border-slate-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="http://www.jietondachem.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="捷通達 官網">
-                        <img src="./img/jietondachem.png" alt="jietondachem" loading="lazy"
+                        <img src="./img/jietondachem.png" alt="jietondachem" width="200" height="80" loading="lazy" decoding="async"
                              onError="handleImageFallback(this, './img/jietondachem.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
@@ -725,7 +741,7 @@
     </section>
 
     <!-- Tab 4: 聯絡我們 -->
-    <section id="tab-contact" class="tab-content">
+    <section id="tab-contact" class="tab-content" role="tabpanel" aria-labelledby="nav-contact">
         <div class="max-w-4xl mx-auto px-4 py-10">
 
             <!-- 上方：公司基本聯絡資訊 -->
@@ -788,7 +804,7 @@
                         <i class="fa-solid fa-bolt text-amber-500 text-lg shrink-0" aria-hidden="true"></i>
                         <div>
                             <div class="text-xs font-bold" id="mode-quick-title">指定樣品 / 快速詢價</div>
-                            <div class="text-[11px] text-slate-600 font-medium" id="mode-quick-sub">
+                            <div class="text-[11px] text-slate-700 font-medium" id="mode-quick-sub">
                                 已有明確產品型號，快速留下資料
                             </div>
                         </div>
@@ -799,7 +815,7 @@
                         <i class="fa-solid fa-vial-circle-check text-blue-800 text-lg shrink-0" aria-hidden="true"></i>
                         <div>
                             <div class="text-xs font-bold" id="mode-detailed-title">詳細應用需求評估 (完整申請單)</div>
-                            <div class="text-[11px] text-slate-600 font-medium" id="mode-detailed-sub">
+                            <div class="text-[11px] text-slate-700 font-medium" id="mode-detailed-sub">
                                 提供配方條件與底材資訊，由專人為您選擇適合產品
                             </div>
                         </div>
@@ -836,56 +852,56 @@
                                     <span class="text-red-600">*</span></label>
                                 <input type="text" id="quick-company" name="quick_company" required
                                        placeholder="請輸入公司名稱"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                             </div>
                             <div>
                                 <label for="quick-contact" class="block font-bold text-slate-900 mb-1">聯絡人（職稱）
                                     <span class="text-red-600">*</span></label>
                                 <input type="text" id="quick-contact" name="quick_contact" required
                                        placeholder="請輸入聯絡人姓名與職稱"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                             </div>
                             <div>
                                 <label for="quick-email" class="block font-bold text-slate-900 mb-1">電子信箱 <span
                                         class="text-red-600">*</span></label>
                                 <input type="email" id="quick-email" name="quick_email" required
                                        placeholder="example@company.com"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                             </div>
                             <div>
                                 <label for="quick-mobile" class="block font-bold text-slate-900 mb-1">手機
                                     <span class="text-red-600">*</span></label>
                                 <input type="tel" id="quick-mobile" name="quick_mobile" required
                                        placeholder="請輸入手機號碼"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                             </div>
                             <div>
                                 <label for="quick-phone"
                                        class="block font-bold text-slate-900 mb-1">電話及分機<span
                                         class="text-red-600">*</span></label>
                                 <input type="tel" id="quick-phone" name="quick_phone" placeholder="請輸入市話及分機號碼"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                             </div>
                             <div>
                                 <label for="quick-sample" class="block font-bold text-slate-900 mb-1">指定索樣產品與數量
                                     <span class="text-red-600">*</span></label>
                                 <input type="text" id="quick-sample" name="quick_sample" required
                                        placeholder="例如：MP-22 (100g)"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                             </div>
                             <div class="md:col-span-2">
                                 <label for="quick-address" class="block font-bold text-slate-900 mb-1">樣品寄送地址
                                     <span class="text-red-600">*</span></label>
                                 <input type="text" id="quick-address" name="quick_address" required
                                        placeholder="請輸入完整的收件地址"
-                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                       class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                             </div>
                             <div class="md:col-span-2">
                                 <label for="quick-msg" class="block font-bold text-slate-900 mb-1">備註 /
                                     詢問內容</label>
                                 <textarea id="quick-msg" name="quick_msg" rows="3"
                                           placeholder="請輸入您的其他需求或疑問..."
-                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400"></textarea>
+                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500"></textarea>
                             </div>
                         </div>
                     </div>
@@ -898,7 +914,7 @@
                                     <span class="w-4.5 h-4.5 rounded-full bg-blue-950 text-white text-[10px] flex items-center justify-center font-bold">A</span>
                                     請填寫基本聯絡資訊
                                 </div>
-                                <span class="text-[11px] text-slate-600 font-medium">標記 <span
+                                <span class="text-[11px] text-slate-700 font-medium">標記 <span
                                         class="text-red-600">*</span> 為必填欄位</span>
                             </div>
                             <div class="p-3.5 grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs">
@@ -907,21 +923,21 @@
                                         <span class="text-red-600">*</span></label>
                                     <input type="text" id="detail-company" name="detail_company" required
                                            placeholder="請輸入公司名稱"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                 </div>
                                 <div>
                                     <label for="detail-contact" class="block font-bold text-slate-900 mb-1">聯絡人（職稱）
                                         <span class="text-red-600">*</span></label>
                                     <input type="text" id="detail-contact" name="detail_contact" required
                                            placeholder="請輸入聯絡人姓名與職稱"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                 </div>
                                 <div>
                                     <label for="detail-mobile" class="block font-bold text-slate-900 mb-1">手機
                                         <span class="text-red-600">*</span></label>
                                     <input type="tel" id="detail-mobile" name="detail_mobile"
                                            placeholder="請輸入手機號碼"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                 </div>
                                 <div>
                                     <label for="detail-phone"
@@ -930,28 +946,28 @@
                                     </label>
                                     <input type="tel" id="detail-phone" name="detail_phone"
                                            placeholder="請輸入市話及分機號碼"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                 </div>
                                 <div>
                                     <label for="detail-email" class="block font-bold text-slate-900 mb-1">Email <span
                                             class="text-red-600">*</span></label>
                                     <input type="email" id="detail-email" name="detail_email" required
                                            placeholder="example@company.com"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                 </div>
                                 <div>
                                     <label for="detail-fax"
                                            class="block font-bold text-slate-900 mb-1">傳真號碼<span
                                             class="text-red-600">*</span></label>
                                     <input type="text" id="detail-fax" name="detail_fax" placeholder="例如：02-12345679"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                 </div>
                                 <div class="md:col-span-2">
                                     <label for="detail-address" class="block font-bold text-slate-900 mb-1">寄送地址
                                         <span class="text-red-600">*</span></label>
                                     <input type="text" id="detail-address" name="detail_address" required
                                            placeholder="請輸入完整的樣品收件地址"
-                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                           class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                 </div>
                             </div>
                         </div>
@@ -1051,7 +1067,7 @@
                                                class="text-slate-900 font-bold shrink-0">其他功能：</label>
                                         <input type="text" id="detail-other-func" name="detail_other_func"
                                                placeholder="例如：防潑水、抗黏、增加摩擦係數、改善流動性、易清潔、防潮..."
-                                               class="w-full px-2.5 py-1 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                               class="w-full px-2.5 py-1 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                     </div>
                                 </div>
 
@@ -1189,7 +1205,7 @@
                                                     class="rounded text-blue-900"> 石材</label>
                                             <input type="text" id="detail-substrate-other" name="detail_substrate_other"
                                                    placeholder="其他材質描述..."
-                                                   class="px-2 py-0.5 bg-white border border-slate-300 rounded text-xs outline-none focus:border-blue-900 text-slate-900 font-medium placeholder-slate-400 grow max-w-xs">
+                                                   class="px-2 py-0.5 bg-white border border-slate-300 rounded text-xs outline-none focus:border-blue-900 text-slate-900 font-medium placeholder-slate-500 grow max-w-xs">
                                         </div>
                                     </div>
                                 </div>
@@ -1214,12 +1230,12 @@
                                                    class="font-bold text-slate-900">烘烤溫度：</label>
                                             <input type="text" id="detail-bake-temp" name="detail_bake_temp"
                                                    placeholder="如: 120℃"
-                                                   class="w-16 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 font-medium placeholder-slate-400">
+                                                   class="w-16 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 font-medium placeholder-slate-500">
                                             <label for="detail-bake-time"
                                                    class="font-bold text-slate-900 ml-0.5">時間：</label>
                                             <input type="text" id="detail-bake-time" name="detail_bake_time"
                                                    placeholder="如: 20 min"
-                                                   class="w-20 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 font-medium placeholder-slate-400">
+                                                   class="w-20 px-1.5 py-0.5 bg-white border border-slate-300 rounded text-center outline-none focus:border-blue-900 text-slate-900 font-medium placeholder-slate-500">
                                         </div>
                                     </div>
                                 </div>
@@ -1271,14 +1287,14 @@
                                         <label for="detail-restricted" class="block font-bold text-slate-900 mb-1">其他資訊（限用物質）</label>
                                         <input type="text" id="detail-restricted" name="detail_restricted"
                                                placeholder="例如：八大重金屬、EN-71、RoHS..."
-                                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                     </div>
                                     <div>
                                         <label for="detail-sample-req" class="block font-bold text-slate-900 mb-1">索樣產品
                                             <span class="text-red-600">*</span></label>
                                         <input type="text" id="detail-sample-req" name="detail_sample_req" required
                                                placeholder="請填寫預計索取的產品名稱與數量"
-                                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400">
+                                               class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500">
                                     </div>
                                 </div>
 
@@ -1315,21 +1331,21 @@
                                     曾試過的相關樣品</label>
                                 <textarea id="detail-past-samples" name="detail_past_samples" rows="2.5"
                                           placeholder="請填寫曾經試用過的樣品名稱、編號或評估結果..."
-                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400"></textarea>
+                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500"></textarea>
                             </div>
                             <div>
                                 <label for="detail-remarks" class="block font-bold text-slate-900 mb-1">E. 備註 /
                                     其他說明</label>
                                 <textarea id="detail-remarks" name="detail_remarks" rows="2.5"
                                           placeholder="請輸入其他補充說明事項..."
-                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-400"></textarea>
+                                          class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-300 rounded outline-none focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-900 text-xs text-slate-900 font-medium placeholder-slate-500"></textarea>
                             </div>
                         </div>
                     </div>
 
                     <!-- 底部說明與提交按鈕 -->
                     <div class="mt-6 pt-3.5 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
-                        <div class="text-[11px] text-slate-600 font-medium leading-relaxed">
+                        <div class="text-[11px] text-slate-700 font-medium leading-relaxed">
                             <p>※ 本調查表內所含之個人資料將受我司嚴格保護，並僅作為公司業務聯繫使用。</p>
                             <p class="mt-0.5">習慣傳真作業？
                                 <a href="./doc/Sample_Request_Form.docx" download
@@ -2217,8 +2233,6 @@
                     class: 'w-[70px] min-w-[70px] font-bold text-blue-950 whitespace-nowrap truncate',
                     getValue: p => p.production_method
                 },
-
-
                 {
                     id: 'blackness',
                     propKey: 'blackness_my',
@@ -2389,7 +2403,6 @@
             return (p.featured_categories || []).map(c => `<span class="bg-blue-100 text-blue-900 border border-blue-200 font-bold px-1.5 py-0.5 rounded mr-1">${c}</span>`).join('') || '—';
         }
 
-        // 建立分數轉換字典
         const plusMap = {1: '+', 2: '++', 3: '+++'};
 
         const categoryMeta = {
@@ -2420,7 +2433,6 @@
                 colorClass = 'bg-purple-700 text-white font-bold shadow-sm';
             }
 
-            // 將 score 轉成加號格式
             const displayScore = plusMap[score] || score;
 
             const badgeHtml = `<span class="text-[10px] px-1.5 py-0.5 rounded ${colorClass} inline-flex items-center gap-0.5">${label} <span class="text-[9px] opacity-90 font-bold">${displayScore}</span></span>`;
@@ -2440,7 +2452,7 @@
         </div>`;
         }).filter(Boolean).join('');
 
-        return badgeRowsHtml || `<span class="text-slate-400 italic text-[11px]">（展開查看全部指標）</span>`;
+        return badgeRowsHtml || `<span class="text-slate-500 italic text-[11px]">（展開查看全部指標）</span>`;
     }
 
     function renderAccordionDetailCard(p) {
@@ -2476,7 +2488,6 @@
                     ? 'bg-blue-700 text-white font-bold'
                     : 'bg-slate-100 text-slate-700 border border-slate-300 font-medium';
 
-                // 轉換為加號顯示
                 const displayScore = plusMap[score] || score;
 
                 return `<span class="text-[10px] px-1.5 py-0.5 rounded ${colorClass} inline-flex items-center gap-0.5">${label} <span class="font-bold">${displayScore}</span></span>`;
@@ -2514,17 +2525,17 @@
                 <i class="fa-solid fa-star"></i> 所有性能指標評分 (All Performance Ratings)
             </span>
             <div class="flex flex-wrap gap-1">
-                ${allRatingsBadges || `<span class="text-slate-400 italic text-[11px]">無評分資料</span>`}
+                ${allRatingsBadges || `<span class="text-slate-500 italic text-[11px]">無評分資料</span>`}
             </div>
         </div>
                 <div class="bg-white p-3 rounded-lg border border-gray-300 shadow-sm space-y-3">
                     <div>
                         <span class="text-[10px] text-blue-900 font-bold block mb-1 flex items-center gap-1"><i class="fa-solid fa-layer-group"></i> ${t.validated_apps}</span>
-                        <div class="flex flex-wrap gap-1">${appBadges || `<span class="text-slate-500 italic text-[11px] font-normal">${t.unspecified_tag}</span>`}</div>
+                        <div class="flex flex-wrap gap-1">${appBadges || `<span class="text-slate-600 italic text-[11px] font-normal">${t.unspecified_tag}</span>`}</div>
                     </div>
                     <div>
                         <span class="text-[10px] text-blue-900 font-bold block mb-1 flex items-center gap-1"><i class="fa-solid fa-wand-magic-sparkles"></i> ${t.perf_descriptions}</span>
-                        <ul class="list-disc pl-3.5 space-y-1 leading-relaxed">${descList || `<li class="text-slate-500 italic font-normal">${t.no_specific_desc}</li>`}</ul>
+                        <ul class="list-disc pl-3.5 space-y-1 leading-relaxed">${descList || `<li class="text-slate-600 italic font-normal">${t.no_specific_desc}</li>`}</ul>
                     </div>
                 </div>
             </div>
@@ -2780,7 +2791,7 @@
                     : 'bg-white text-slate-800 border-slate-300 hover:border-blue-400 hover:bg-blue-50'
             }`;
             checkboxItem.innerHTML = `
-            <input type="checkbox" value="${key}" ${isChecked ? 'checked' : ''} onchange="toggleFilterCheckbox('${key}', this.checked)" class="sr-only">
+            <input type="checkbox" value="${key}" ${isChecked ? 'checked' : ''} onchange="toggleFilterCheckbox('${key}', this.checked)" class="sr-only" aria-label="${label}">
             <span>${label}</span>`;
             checkboxContainer.appendChild(checkboxItem);
         });
@@ -2827,7 +2838,6 @@
     // 6. 全局/跨領域搜尋引擎觸發邏輯
     // ==========================================
     function debouncedSearch(val) {
-        // 同步所有全域搜尋輸入框的值
         document.querySelectorAll('.global-search-input').forEach(input => {
             if (input.value !== val) input.value = val;
         });
@@ -2876,7 +2886,6 @@
         }
 
         for (const [configKey, brand] of Object.entries(AppState.configs)) {
-            // 直接使用全域的反向映射（partnerConfigMap 的 key/value 反轉）
             const reversePartnerMap = Object.fromEntries(
                 Object.entries(partnerConfigMap).map(([k, v]) => [v, k])
             );
@@ -3015,7 +3024,6 @@
         renderProducts();
     }
 
-    // 修改原本的 switchTab 函式，加入 updateUrl 參數
     function switchTab(tabId, updateUrl = true) {
         document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
         const target = document.getElementById(`tab-${tabId}`);
@@ -3024,26 +3032,26 @@
         document.querySelectorAll('.nav-btn').forEach(btn => {
             btn.classList.remove('text-blue-950', 'border-blue-900', 'font-bold');
             btn.classList.add('text-slate-700', 'border-transparent', 'font-medium');
+            btn.setAttribute('aria-selected', 'false');
         });
 
         const activeNavBtn = document.getElementById(`nav-${tabId}`);
         if (activeNavBtn) {
             activeNavBtn.classList.remove('text-slate-700', 'border-transparent', 'font-medium');
             activeNavBtn.classList.add('text-blue-950', 'border-blue-900', 'font-bold');
+            activeNavBtn.setAttribute('aria-selected', 'true');
         }
 
         if (tabId === 'products') updatePartnerUI();
         if (updateUrl) updateHashRoute();
     }
 
-    // 監聽 AppState 變更以自動同步 URL
     const originalSet = AppState.set.bind(AppState);
     AppState.set = function (key, value) {
         originalSet(key, value);
         updateHashRoute();
     };
 
-    // 監聽瀏覽器 上一頁/下一頁 (popstate)
     window.addEventListener('popstate', parseHashRoute);
 
     function switchLanguage(lang) {
@@ -3051,7 +3059,6 @@
     }
 
     function updateLanguageUI() {
-        // 更新語系按鈕 UI
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.className = "lang-btn px-3 py-0.5 text-xs font-medium rounded text-slate-600 hover:text-slate-900";
         });
@@ -3138,7 +3145,6 @@
         event.target.reset();
     }
 
-    // 解析 Hash URL 並套用至 AppState
     function parseHashRoute() {
         const hash = window.location.hash.replace(/^#/, '');
         if (!hash) return;
@@ -3147,7 +3153,6 @@
         const tabId = tabPart || 'about';
         const params = new URLSearchParams(queryPart || '');
 
-        // 切換頁籤（避免觸發無限循環）
         switchTab(tabId, false);
 
         if (tabId === 'products') {
@@ -3166,7 +3171,6 @@
         }
     }
 
-    // 更新 Hash URL (不觸發 hashchange 事件循環)
     function updateHashRoute() {
         const activeTab = document.querySelector('.tab-content.active')?.id.replace('tab-', '') || 'about';
         const params = new URLSearchParams();
@@ -3232,7 +3236,6 @@
     };
 
     document.addEventListener("DOMContentLoaded", () => {
-        // 監聽表格內的點擊事件
         document.getElementById('directory-matrix-body').addEventListener('click', (e) => {
             const targetBtn = e.target.closest('button[data-action]');
             if (targetBtn) {
@@ -3247,12 +3250,11 @@
             }
         });
 
-        // 載入品牌設定檔並初始化路由狀態
         fetch('config.json')
             .then(res => res.ok ? res.json() : AppState.configs)
             .then(configData => {
                 AppState.configs = configData;
-                parseHashRoute(); // 依據網址 Hash 初始化頁籤與產品
+                parseHashRoute();
                 if (!window.location.hash) updatePartnerUI();
             })
             .catch(() => {

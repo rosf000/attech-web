@@ -1,0 +1,295 @@
+{
+  "mpi": {
+    "ptfe": {
+      "jsonPath": "./json/ptfe.json",
+      "titleZh": "PTFE 取代",
+      "titleEn": "PTFE Alternative",
+      "categoryMap": {
+        "耐刮": "scratch_resistance",
+        "耐磨損": "abrasion_resistance",
+        "防潮": "moisture_resistance"
+      },
+      "ratingKeyMap": {
+        "ptfe_alternative": "ptfe_alternative",
+        "scratch_resistance": "scratch_resistance",
+        "abrasion_resistance": "abrasion_resistance",
+        "burnish_resistance": "burnish_resistance",
+        "slip_lubricity": "slip_lubricity",
+        "anti_slip": "anti_slip",
+        "matting_gloss_control": "matting_gloss_control",
+        "water_repellency": "water_repellency",
+        "moisture_resistance": "moisture_resistance",
+        "block_resistance": "block_resistance",
+        "improved_extrusion_flow": "improved_extrusion_flow",
+        "metal_mark_resistance": "metal_mark_resistance",
+        "apparent_hardness": "apparent_hardness",
+        "increased_cof": "increased_cof",
+        "anti_gassing": "anti_gassing",
+        "clarity": "clarity",
+        "scuff_heel_resistance": "scuff_heel_resistance",
+        "cleanability": "cleanability",
+        "no_silica_dust": "no_silica_dust"
+      }
+    },
+    "powder": {
+      "jsonPath": "./json/powder_coatings.json",
+      "titleZh": "粉體塗料",
+      "titleEn": "Powder Coating",
+      "categoryMap": {
+        "PTFE 取代": "ptfe_alternative",
+        "耐刮": "scratch_resistance",
+        "耐磨損": "abrasion_resistance",
+        "高光澤": "matting_gloss_control",
+        "消光": "matting_gloss_control",
+        "防腐蝕": "corrosion_resistance",
+        "織紋": "texture_structure",
+        "柔感": "soft_touch"
+      },
+      "ratingKeyMap": {
+        "ptfe_alternative": "ptfe_alternative",
+        "scratch_resistance": "scratch_resistance",
+        "abrasion_resistance": "abrasion_resistance",
+        "slip_lubricity": "slip_lubricity",
+        "matting_gloss_control": "matting_gloss_control",
+        "soft_touch": "soft_touch",
+        "texture_structure": "texture_structure",
+        "corrosion_resistance": "corrosion_resistance",
+        "block_resistance": "block_resistance",
+        "improved_extrusion_flow": "improved_extrusion_flow",
+        "anti_gassing": "anti_gassing",
+        "metal_mark_resistance": "metal_mark_resistance",
+        "apparent_hardness": "apparent_hardness"
+      }
+    },
+    "industrial": {
+      "jsonPath": "./json/industrial_coatings.json",
+      "titleZh": "工業塗料",
+      "titleEn": "Industrial Coating",
+      "categoryMap": {
+        "PTFE 取代": "ptfe_alternative",
+        "耐刮": "scratch_resistance",
+        "耐磨損": "abrasion_resistance",
+        "高光澤": "matting_gloss_control",
+        "消光": "matting_gloss_control",
+        "織紋": "texture_structure",
+        "柔感": "soft_touch"
+      },
+      "ratingKeyMap": {
+        "ptfe_alternative": "ptfe_alternative",
+        "scratch_resistance": "scratch_resistance",
+        "abrasion_resistance": "abrasion_resistance",
+        "burnish_resistance": "burnish_resistance",
+        "slip_lubricity": "slip_lubricity",
+        "matting_gloss_control": "matting_gloss_control",
+        "soft_touch": "soft_touch",
+        "texture_structure": "texture_structure",
+        "block_resistance": "block_resistance",
+        "improved_extrusion_flow": "improved_extrusion_flow",
+        "metal_mark_resistance": "metal_mark_resistance",
+        "apparent_hardness": "apparent_hardness",
+        "increased_cof": "increased_cof"
+      }
+    },
+    "ink": {
+      "jsonPath": "./json/inks.json",
+      "titleZh": "油墨",
+      "titleEn": "Energy Curable Inks & OPVs",
+      "categoryMap": {
+        "PTFE 取代": "ptfe_alternative",
+        "耐刮": "scratch_resistance",
+        "耐磨損": "abrasion_resistance",
+        "高光澤": "matting_gloss_control",
+        "消光": "matting_gloss_control",
+        "柔感": "soft_touch"
+      },
+      "ratingKeyMap": {
+        "ptfe_alternative": "ptfe_alternative",
+        "scratch_resistance": "scratch_resistance",
+        "abrasion_resistance": "abrasion_resistance",
+        "rub_resistance": "rub_resistance",
+        "slip_lubricity": "slip_lubricity",
+        "matting_gloss_control": "matting_gloss_control",
+        "soft_touch": "soft_touch",
+        "texture_structure": "texture_structure",
+        "block_resistance": "block_resistance",
+        "increased_cof": "increased_cof",
+        "clarity": "clarity",
+        "heat_resistance": "heat_resistance",
+        "intercoat_adhesion": "intercoat_adhesion",
+        "anti_gassing": "anti_gassing"
+      }
+    },
+    "industrial floor": {
+      "jsonPath": "./json/industrial_floor_coatings.json",
+      "titleZh": "地板塗料",
+      "titleEn": "Industrial Floor Coatings",
+      "categoryMap": {
+        "PTFE 取代": "ptfe_alternative",
+        "防滑": "anti_slip",
+        "柔感": "soft_touch",
+        "消光": "matting_gloss_control",
+        "防潑水": "water_repellency"
+      },
+      "ratingKeyMap": {
+        "ptfe_alternative": "ptfe_alternative",
+        "scratch_resistance": "scratch_resistance",
+        "abrasion_resistance": "abrasion_resistance",
+        "anti_slip": "anti_slip",
+        "matting_gloss_control": "matting_gloss_control",
+        "soft_touch": "soft_touch",
+        "texture_structure": "texture_structure",
+        "water_repellency": "water_repellency",
+        "block_resistance": "block_resistance",
+        "scuff_heel_resistance": "scuff_heel_resistance",
+        "cleanability": "cleanability",
+        "no_silica_dust": "no_silica_dust"
+      }
+    },
+    "wood": {
+      "jsonPath": "./json/wood.json",
+      "titleZh": "木器漆",
+      "titleEn": "Wood Coatings",
+      "categoryMap": {
+        "PTFE 取代": "ptfe_alternative",
+        "織紋": "texture_structure",
+        "柔感": "soft_touch",
+        "消光": "matting_gloss_control",
+        "耐刮": "scratch_resistance",
+        "耐磨損": "abrasion_resistance",
+        "防潑水": "water_repellency",
+        "防潮": "moisture_resistance"
+      },
+      "ratingKeyMap": {
+        "ptfe_alternative": "ptfe_alternative",
+        "scratch_resistance": "scratch_resistance",
+        "abrasion_resistance": "abrasion_resistance",
+        "burnish_resistance": "burnish_resistance",
+        "matting_gloss_control": "matting_gloss_control",
+        "soft_touch": "soft_touch",
+        "texture_structure": "texture_structure",
+        "water_repellency": "water_repellency",
+        "moisture_resistance": "moisture_resistance",
+        "block_resistance": "block_resistance",
+        "clarity": "clarity",
+        "gloss_retention": "gloss_retention",
+        "lubricity_smooth_feel": "lubricity_smooth_feel",
+        "sanding_efficiency": "sanding_efficiency",
+        "cleanability": "cleanability"
+      }
+    },
+    "leather": {
+      "jsonPath": "./json/leather_coatings.json",
+      "titleZh": "皮革塗料",
+      "titleEn": "Leather Coatings ",
+      "categoryMap": {
+        "PTFE 取代": "ptfe_alternative",
+        "織紋": "texture_structure",
+        "消光": "matting_gloss_control",
+        "柔感": "soft_touch",
+        "耐磨損": "abrasion_resistance"
+      },
+      "ratingKeyMap": {
+        "ptfe_alternative": "ptfe_alternative",
+        "scratch_resistance": "scratch_resistance",
+        "abrasion_resistance": "abrasion_resistance",
+        "burnish_resistance": "burnish_resistance",
+        "slip": "slip",
+        "matting_gloss_control": "matting_gloss_control",
+        "soft_touch": "soft_touch",
+        "texture_structure": "texture_structure",
+        "block_resistance": "block_resistance",
+        "polish": "polish",
+        "cleanability": "cleanability"
+      }
+    }
+  },
+  "dorfketal": {
+    "tyzor": {
+      "jsonPath": "./dorfketal_json/products.json",
+      "titleZh": "Tyzor® 鈦/鋯酸酯全系列",
+      "titleEn": "Tyzor® Titanates & Zirconates",
+      "categoryMap": {
+        "PET/PBT 催化劑": "PET/PBT Catalyst",
+        "通用催化劑": "Catalyst",
+        "膠黏劑與密封膠": "Adhesive and Sealant",
+        "油墨": "Ink",
+        "塗料": "Coating",
+        "玻璃": "Glass",
+        "防腐蝕保護": "Corrosion Protection"
+      }
+    }
+  },
+  "orion": {
+    "coating": {
+      "jsonPath": "./orion_json/coating.json",
+      "titleZh": "Orion 塗料碳黑",
+      "titleEn": "Orion Coatings Carbon Black",
+      "categoryMap": {
+        "汽車塗料": "automotive_coatings",
+        "電著塗料": "electro_deposition_coatings",
+        "一般工業塗料": "general_industrial_coating",
+        "金屬漆": "metallics",
+        "裝飾塗料": "decorative_coating",
+        "濕式 PU 着色": "wet_pu_coloring",
+        "防靜電與導電塗料": "antistatic_and_conductive_coating"
+      },
+      "systemMap": {
+        "溶劑型": "solvent_borne",
+        "水性": "waterborne",
+        "粉體塗料": "powder_coating"
+      }
+    },
+    "ink_impact": {
+      "jsonPath": "./orion_json/Inkandimpactprinting.json",
+      "titleZh": "Orion 油墨碳黑",
+      "titleEn": "Orion Inks & Non-Impact Printing Carbon Black",
+      "categoryMap": {
+        "單張紙凸版油墨": "sheetfed_letterpress",
+        "熱固性油墨": "heatset",
+        "冷固性油墨": "coldset",
+        "出版凹版油墨": "publication_gravure_inks",
+        "溶劑型液態油墨": "liquid_inks_solvent_based",
+        "水性液態油墨": "liquid_inks_water_based",
+        "絲網印刷油墨": "screen_inks",
+        "UV 固化油墨": "uv_curing_inks",
+        "UV 噴墨油墨": "uv_curing_inkjet_inks",
+        "水性噴墨油墨": "aquous_inkjet_inks",
+        "非水性噴墨油墨": "non-aquous_inkjet_inks",
+        "碳粉": "toner"
+      }
+    },
+    "polymer": {
+      "jsonPath": "./orion_json/polymer.json",
+      "titleZh": "Orion 塑膠碳黑",
+      "titleEn": "Orion Polymers & Plastics Carbon Black",
+      "categoryMap": {
+        "聚烯烴": "polyolefins",
+        "生物聚合物": "biopolymers",
+        "苯乙烯共聚物": "styrene_copolymers",
+        "聚酰胺": "polyamides",
+        "聚酯": "polyesters",
+        "聚氯乙烯": "polyvinylchlorides",
+        "工程塑膠": "engineered_polymers",
+        "熱固性樹脂": "thermosets"
+      },
+      "applicationMap": {
+        "絕緣與發泡": "insulation_and_forms",
+        "電線電纜": "wire_and_cables",
+        "管材": "pipes",
+        "薄膜": "films",
+        "纖維": "fibres",
+        "膠黏劑與密封膠": "adhesives_and_sealants",
+        "母粒與複合材料": "masterbatch_and_compounds"
+      },
+      "functionMap": {
+        "普通黑度著色": "1",
+        "紫外線防護": "2",
+        "高黑度著色": "3",
+        "補強、調節流變": "4",
+        "調色": "5",
+        "導電": "6"
+      }
+    }
+  },
+  "others": {}
+}

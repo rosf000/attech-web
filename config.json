@@ -1,0 +1,249 @@
+{
+  "mpi": {
+    "brandName": "Micro Powders",
+    "files": [
+      {
+        "key": "ptfe",
+        "jsonPath": "./json/mpi/ptfe.json",
+        "titleZh": "PTFE 取代",
+        "titleEn": "PTFE Alternative",
+        "categoryMap": {
+          "耐刮": "scratch_resistance",
+          "耐磨損": "abrasion_resistance",
+          "防潮": "moisture_resistance"
+        }
+      },
+      {
+        "key": "powder",
+        "jsonPath": "./json/mpi/powder_coatings.json",
+        "titleZh": "粉體塗料",
+        "titleEn": "Powder Coating",
+        "categoryMap": {
+          "PTFE 取代": "ptfe_alternative",
+          "耐刮": "scratch_resistance",
+          "耐磨損": "abrasion_resistance",
+          "高光澤": "matting_gloss_control",
+          "消光": "matting_gloss_control",
+          "防腐蝕": "corrosion_resistance",
+          "織紋": "texture_structure",
+          "柔感": "soft_touch"
+        }
+      },
+      {
+        "key": "industrial",
+        "jsonPath": "./json/mpi/industrial_coatings.json",
+        "titleZh": "工業塗料",
+        "titleEn": "Industrial Coating",
+        "categoryMap": {
+          "PTFE 取代": "ptfe_alternative",
+          "耐刮": "scratch_resistance",
+          "耐磨損": "abrasion_resistance",
+          "高光澤": "matting_gloss_control",
+          "消光": "matting_gloss_control",
+          "織紋": "texture_structure",
+          "柔感": "soft_touch"
+        }
+      },
+      {
+        "key": "ink",
+        "jsonPath": "./json/mpi/inks.json",
+        "titleZh": "油墨",
+        "titleEn": "Energy Curable Inks & OPVs",
+        "categoryMap": {
+          "PTFE 取代": "ptfe_alternative",
+          "耐刮": "scratch_resistance",
+          "耐磨損": "abrasion_resistance",
+          "高光澤": "matting_gloss_control",
+          "消光": "matting_gloss_control",
+          "柔感": "soft_touch"
+        }
+      },
+      {
+        "key": "industrial floor",
+        "jsonPath": "./json/mpi/industrial_floor_coatings.json",
+        "titleZh": "地板塗料",
+        "titleEn": "Industrial Floor Coatings",
+        "categoryMap": {
+          "PTFE 取代": "ptfe_alternative",
+          "防滑": "anti_slip",
+          "柔感": "soft_touch",
+          "消光": "matting_gloss_control",
+          "防潑水": "water_repellency"
+        }
+      },
+      {
+        "key": "wood",
+        "jsonPath": "./json/mpi/wood.json",
+        "titleZh": "木器漆",
+        "titleEn": "Wood Coatings",
+        "categoryMap": {
+          "PTFE 取代": "ptfe_alternative",
+          "織紋": "texture_structure",
+          "柔感": "soft_touch",
+          "消光": "matting_gloss_control",
+          "耐刮": "scratch_resistance",
+          "耐磨損": "abrasion_resistance",
+          "防潑水": "water_repellency",
+          "防潮": "moisture_resistance"
+        }
+      },
+      {
+        "key": "leather",
+        "jsonPath": "./json/mpi/leather_coatings.json",
+        "titleZh": "皮革塗料",
+        "titleEn": "Leather Coatings",
+        "categoryMap": {
+          "PTFE 取代": "ptfe_alternative",
+          "織紋": "texture_structure",
+          "消光": "matting_gloss_control",
+          "柔感": "soft_touch",
+          "耐磨損": "abrasion_resistance"
+        }
+      },
+      {
+        "key": "automotive polishes",
+        "jsonPath": "./json/mpi/automotive_polishes.json",
+        "titleZh": "汽車研磨劑",
+        "titleEn": "Automotive Polishes"
+      }
+    ]
+  },
+  "dorfketal": {
+    "brandName": "Dorf Ketal",
+    "files": [
+      {
+        "key": "tyzor",
+        "jsonPath": "./json/dorfketal/tyzor.json",
+        "titleZh": "Tyzor® 鈦/鋯酸酯全系列",
+        "titleEn": "Tyzor® Titanates & Zirconates",
+        "categoryMap": {
+          "PET/PBT 催化劑": "PET/PBT Catalyst",
+          "通用催化劑": "Catalyst",
+          "膠黏劑與密封膠": "Adhesive and Sealant",
+          "油墨": "Ink",
+          "塗料": "Coating",
+          "玻璃": "Glass",
+          "防腐蝕保護": "Corrosion Protection"
+        }
+      },
+      {
+        "key": "px",
+        "jsonPath": "./json/dorfketal/px.json",
+        "titleZh": "PX 潤滑油添加劑",
+        "titleEn": "PX Lubricant Additives",
+        "categoryMap": {
+          "Engine Oil": "engine_oil",
+          "Automotive/Truck Gear Oils": "automotive_truck_gear_oils",
+          "Natural Gas Engine Oils": "natural_gas_engine_oils",
+          "Jet Turbine Oils": "jet_turbine_oils",
+          "Industrial Gear Oils": "industrial_gear_oils",
+          "Hydraulic Fluids": "hydraulic_fluids",
+          "Compressor Oils": "compressor_oils",
+          "Slideways/Ways Oils": "slideways_ways_oils",
+          "Circulating Oils": "circulating_oils",
+          "Greases": "greases",
+          "Metal Removal Fluids": "metal_removal_fluids",
+          "Metal Forming Lubricants": "metal_forming_lubricants"
+        }
+      }
+    ]
+  },
+  "orion": {
+    "brandName": "Orion",
+    "files": [
+      {
+        "key": "coating",
+        "jsonPath": "./json/orion/coating.json",
+        "titleZh": "Orion 塗料碳黑",
+        "titleEn": "Orion Coatings Carbon Black",
+        "categoryMap": {
+          "汽車塗料": "automotive_coatings",
+          "電著塗料": "electro_deposition_coatings",
+          "一般工業塗料": "general_industrial_coating",
+          "金屬漆": "metallics",
+          "建築塗料": "decorative_coating",
+          "濕式 PU 著色": "wet_pu_coloring",
+          "防靜電與導電塗料": "antistatic_and_conductive_coating",
+          "溶劑型": "solvent_borne",
+          "水性": "waterborne",
+          "粉體塗料": "powder_coating"
+        }
+      },
+      {
+        "key": "ink_impact",
+        "jsonPath": "./json/orion/Inkandimpactprinting.json",
+        "titleZh": "Orion 油墨碳黑",
+        "titleEn": "Orion Inks & Non-Impact Printing Carbon Black",
+        "categoryMap": {
+          "單張紙凸版油墨": "sheetfed_letterpress",
+          "熱固性油墨": "heatset",
+          "冷固性油墨": "coldset",
+          "出版凹版油墨": "publication_gravure_inks",
+          "溶劑型液態油墨": "liquid_inks_solvent_based",
+          "水性液態油墨": "liquid_inks_water_based",
+          "絲網印刷油墨": "screen_inks",
+          "UV 固化油墨": "uv_curing_inks",
+          "UV 噴墨油墨": "uv_curing_inkjet_inks",
+          "水性噴墨油墨": "aquous_inkjet_inks",
+          "非水性噴墨油墨": "non-aquous_inkjet_inks",
+          "碳粉": "toner"
+        }
+      }
+    ]
+  },
+  "others": {
+    "brandName": "Others",
+    "files": [
+      {
+        "key": "coating_additive",
+        "jsonPath": "./json/others/coating_additive.json",
+        "titleZh": "粉體塗料助劑",
+        "titleEn": "Powder Coating Additives",
+        "categoryMap": {
+          "砂紋劑/紋理劑": "Texturing Agent / Wrinkle Agent",
+          "室外消光劑": "Outdoor Matting Agent",
+          "附著力改進劑": "Adhesion Promoter",
+          "增硬劑": "Hardening Agent"
+        }
+      },
+      {
+        "key": "matting_agent",
+        "jsonPath": "./json/others/matting_agent.json",
+        "titleZh": "消光粉",
+        "titleEn": "Matting Agent",
+        "categoryMap": {
+          "表面處理": "Surface Treatment",
+          "無表面處理": "No Surface Treatment"
+        }
+      },
+      {
+        "key": "maleic_acid_resin",
+        "jsonPath": "./json/others/maleic_acid_resin.json",
+        "titleZh": "馬林酸樹脂",
+        "titleEn": "Maleic Acid Resin",
+        "categoryMap": {
+          "馬林酸樹脂": "Maleic Acid Resin",
+          "改質馬林酸樹脂": "Modified Maleic Acid Resin",
+          "醇溶型馬林酸樹脂": "Alcohol-Soluble Maleic Acid Resin",
+          "酯化松香": "Esterified Rosin",
+          "松香季戊四醇酯": "Pentaerythritol Ester of Rosin",
+          "松香改質馬林酸樹脂": "Rosin-Modified Maleic Acid Resin"
+        }
+      },
+      {
+        "key": "cpo_adhesion_promoter",
+        "jsonPath": "./json/others/cpo_adhesion_promoter.json",
+        "titleZh": "密著促進劑(氯系)",
+        "titleEn": "CPO Adhesion Promoter  ",
+        "categoryMap": {}
+      },
+      {
+        "key": "adhesion_promoter",
+        "jsonPath": "./json/others/adhesion_promoter.json",
+        "titleZh": "密著促進劑",
+        "titleEn": "Adhesion Promoter  ",
+        "categoryMap": {}
+      }
+    ]
+  }
+}

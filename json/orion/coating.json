@@ -1,0 +1,1385 @@
+[
+  {
+    "product_name": "COLOUR BLACK FW 171",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "一般工業塗料",
+      "金屬漆",
+      "水性",
+      "粉體塗料"
+    ],
+    "production_method": "HCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 1,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "295",
+      "tinting_strength": "137",
+      "volatile_matter_950c": "2.0",
+      "oil_absorption_number": "108",
+      "ph_value": "8.0",
+      "ash_content": "0.30",
+      "bet_surface_area": "600",
+      "average_primary_particle_size_nm": "11"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK FW 255",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "一般工業塗料",
+      "金屬漆",
+      "溶劑型",
+      "粉體塗料",
+      "水性"
+    ],
+    "production_method": "HCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 1,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "306",
+      "tinting_strength": "135",
+      "volatile_matter_950c": "12.0",
+      "oil_absorption_number": "108",
+      "ph_value": "2.5",
+      "ash_content": "0.50",
+      "bet_surface_area": "600",
+      "average_primary_particle_size_nm": "11"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK FW 310",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "一般工業塗料",
+      "金屬漆",
+      "水性",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "HCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 1,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "310",
+      "tinting_strength": "130",
+      "volatile_matter_950c": "12.0",
+      "oil_absorption_number": "102",
+      "ph_value": "2.5",
+      "ash_content": "0.50",
+      "bet_surface_area": "600",
+      "average_primary_particle_size_nm": "11"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK FW 200",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "一般工業塗料",
+      "金屬漆",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "HCG",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 1,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "286",
+      "tinting_strength": "128",
+      "volatile_matter_950c": "20.0",
+      "oil_absorption_number": "160",
+      "ph_value": "2.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "550",
+      "average_primary_particle_size_nm": "13"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK FW 2",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "一般工業塗料",
+      "金屬漆",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "HCG",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 1,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "283",
+      "tinting_strength": "126",
+      "volatile_matter_950c": "16.5",
+      "oil_absorption_number": "155",
+      "ph_value": "2.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "470",
+      "average_primary_particle_size_nm": "13"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK FW 285",
+    "brand_code": "orion",
+    "production_method": "HCG",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 0,
+      "metallics": 1,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "291",
+      "tinting_strength": "140",
+      "volatile_matter_950c": "5",
+      "oil_absorption_number": "155",
+      "ph_value": "3.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "350",
+      "average_primary_particle_size_nm": "11"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK FW 1",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "一般工業塗料",
+      "水性"
+    ],
+    "production_method": "HCG",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 1,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "280",
+      "tinting_strength": "120",
+      "volatile_matter_950c": "5.0",
+      "oil_absorption_number": "150",
+      "ph_value": "3.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "320",
+      "average_primary_particle_size_nm": "13"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK FW 18",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "一般工業塗料",
+      "金屬漆",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "HCG",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 1,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "273",
+      "tinting_strength": "122",
+      "volatile_matter_950c": "5.0",
+      "oil_absorption_number": "140",
+      "ph_value": "4.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "260",
+      "average_primary_particle_size_nm": "15"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK S 170",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "溶劑型"
+    ],
+    "production_method": "MCG",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "270",
+      "tinting_strength": "122",
+      "volatile_matter_950c": "5.0",
+      "oil_absorption_number": "135",
+      "ph_value": "4.0",
+      "ash_content": "0.02",
+      "bet_surface_area": "230",
+      "average_primary_particle_size_nm": "17"
+    }
+  },
+  {
+    "product_name": "COLOUR BLACK S 160",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "溶劑型"
+    ],
+    "production_method": "MCG",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "263",
+      "tinting_strength": "121",
+      "volatile_matter_950c": "5.0",
+      "oil_absorption_number": "128",
+      "ph_value": "4.0",
+      "ash_content": "0.02",
+      "bet_surface_area": "180",
+      "average_primary_particle_size_nm": "20"
+    }
+  },
+  {
+    "product_name": "PRINTEX® 95",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "粉體塗料"
+    ],
+    "production_method": "HCF",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "258",
+      "tinting_strength": "136",
+      "volatile_matter_950c": "1.0",
+      "oil_absorption_number": "52",
+      "ph_value": "9.5",
+      "ash_content": "0.80",
+      "bet_surface_area": "250",
+      "average_primary_particle_size_nm": "15"
+    }
+  },
+  {
+    "product_name": "HIBLACK® 930L",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "粉體塗料"
+    ],
+    "production_method": "HCF",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "150",
+      "volatile_matter_950c": "1.5",
+      "oil_absorption_number": "73",
+      "ph_value": "8.0",
+      "ash_content": "0.30",
+      "bet_surface_area": "289",
+      "average_primary_particle_size_nm": "14"
+    }
+  },
+  {
+    "product_name": "HIBLACK® 600L",
+    "brand_code": "orion",
+    "production_method": "MCF",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "260",
+      "tinting_strength": "157",
+      "volatile_matter_950c": "1.5",
+      "oil_absorption_number": "77",
+      "ph_value": "8",
+      "ash_content": "0.6",
+      "bet_surface_area": "246",
+      "average_primary_particle_size_nm": "16"
+    }
+  },
+  {
+    "product_name": "HIBLACK® 21LB",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "水性",
+      "粉體塗料"
+    ],
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "117",
+      "volatile_matter_950c": "1.0",
+      "oil_absorption_number": "61",
+      "ph_value": "8.0",
+      "ash_content": "0.50",
+      "bet_surface_area": "85",
+      "average_primary_particle_size_nm": "26"
+    }
+  },
+  {
+    "product_name": "HIBLACK® 200L",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "粉體塗料"
+    ],
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "115",
+      "volatile_matter_950c": "1.0",
+      "oil_absorption_number": "66",
+      "ph_value": "8.0",
+      "ash_content": "0.30",
+      "bet_surface_area": "76",
+      "average_primary_particle_size_nm": "28"
+    }
+  },
+  {
+    "product_name": "HIBLACK® 160",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料"
+    ],
+    "production_method": "LCF",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "60",
+      "volatile_matter_950c": "1.5",
+      "oil_absorption_number": "85",
+      "ph_value": "8.0",
+      "ash_content": "0.20",
+      "bet_surface_area": "35",
+      "average_primary_particle_size_nm": "55"
+    }
+  },
+  {
+    "product_name": "LAMP BLACK 101",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "LB",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 1,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "209",
+      "tinting_strength": "26",
+      "oil_absorption_number": "135",
+      "ph_value": "8.0",
+      "ash_content": "0.02",
+      "bet_surface_area": "29",
+      "average_primary_particle_size_nm": "95"
+    }
+  },
+  {
+    "product_name": "NEROX® 600",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "水性",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "256",
+      "tinting_strength": "130",
+      "volatile_matter_950c": "3.0",
+      "oil_absorption_number": "103",
+      "ph_value": "2.5",
+      "ash_content": "0.10",
+      "bet_surface_area": "130",
+      "average_primary_particle_size_nm": "22"
+    }
+  },
+  {
+    "product_name": "NEROX® 605",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "濕式 PU 著色",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 0,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 1,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "138",
+      "volatile_matter_950c": "3.0",
+      "oil_absorption_number": "72",
+      "ph_value": "2.5",
+      "ash_content": "0.30",
+      "bet_surface_area": "118",
+      "average_primary_particle_size_nm": "22"
+    }
+  },
+  {
+    "product_name": "NEROX® 505",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "濕式 PU 著色",
+      "水性",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 1,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "255",
+      "tinting_strength": "134",
+      "volatile_matter_950c": "3.0",
+      "oil_absorption_number": "68",
+      "ph_value": "2.5",
+      "ash_content": "0.30",
+      "bet_surface_area": "100",
+      "average_primary_particle_size_nm": "24"
+    }
+  },
+  {
+    "product_name": "NEROX® 510",
+    "brand_code": "orion",
+    "featured_categories": [
+      "電著塗料",
+      "一般工業塗料",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 1,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "245",
+      "tinting_strength": "120",
+      "volatile_matter_950c": "3.0",
+      "oil_absorption_number": "104",
+      "ph_value": "2.5",
+      "ash_content": "0.30",
+      "bet_surface_area": "102",
+      "average_primary_particle_size_nm": "24"
+    }
+  },
+  {
+    "product_name": "NEROX® 1000",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "LCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 1,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "61",
+      "volatile_matter_950c": "2.0",
+      "oil_absorption_number": "89",
+      "ph_value": "2.5",
+      "ash_content": "0.10",
+      "bet_surface_area": "36",
+      "average_primary_particle_size_nm": "50"
+    }
+  },
+  {
+    "product_name": "PRINTEX® XE2 B",
+    "brand_code": "orion",
+    "featured_categories": [
+      "防靜電與導電塗料",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "ECB",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 0,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 1
+    },
+    "typical_properties": {
+      "blackness_my": "261",
+      "oil_absorption_number": "420",
+      "ph_value": "7.8",
+      "ash_content": "1.6",
+      "bet_surface_area": "1000",
+      "average_primary_particle_size_nm": "30"
+    }
+  },
+  {
+    "product_name": "PRINTEX® KAPPA 50",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "防靜電與導電塗料",
+      "水性",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "CB",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 0,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 1
+    },
+    "typical_properties": {
+      "blackness_my": "280",
+      "tinting_strength": "139",
+      "volatile_matter_950c": "1.5",
+      "oil_absorption_number": "175",
+      "ph_value": "9.0",
+      "ash_content": "0.07",
+      "bet_surface_area": "375",
+      "average_primary_particle_size_nm": "12"
+    }
+  },
+  {
+    "product_name": "PRINTEX® KAPPA 20",
+    "brand_code": "orion",
+    "featured_categories": [
+      "汽車塗料",
+      "防靜電與導電塗料",
+      "水性",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "CB",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 0,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 1
+    },
+    "typical_properties": {
+      "blackness_my": "255",
+      "tinting_strength": "123",
+      "volatile_matter_950c": "1.5",
+      "oil_absorption_number": "175",
+      "ph_value": "9.0",
+      "ash_content": "0.02",
+      "bet_surface_area": "230",
+      "average_primary_particle_size_nm": "19"
+    }
+  },
+  {
+    "product_name": "PRINTEX® L",
+    "brand_code": "orion",
+    "featured_categories": [
+      "防靜電與導電塗料",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "CB",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 1,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 0,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 1
+    },
+    "typical_properties": {
+      "blackness_my": "246",
+      "tinting_strength": "103",
+      "volatile_matter_950c": "0.8",
+      "oil_absorption_number": "120",
+      "ph_value": "9.0",
+      "ash_content": "0.10",
+      "bet_surface_area": "150",
+      "average_primary_particle_size_nm": "23"
+    }
+  },
+  {
+    "product_name": "PRINTEX® U",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "RCG",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 1,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "246",
+      "tinting_strength": "112",
+      "volatile_matter_950c": "5.0",
+      "oil_absorption_number": "115",
+      "ph_value": "4.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "92",
+      "average_primary_particle_size_nm": "25"
+    }
+  },
+  {
+    "product_name": "PRINTEX® V",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "RCG",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 1,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "246",
+      "tinting_strength": "112",
+      "volatile_matter_950c": "5.0",
+      "oil_absorption_number": "115",
+      "ph_value": "4.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "92",
+      "average_primary_particle_size_nm": "25"
+    }
+  },
+  {
+    "product_name": "PRINTEX® 200",
+    "brand_code": "orion",
+    "featured_categories": [
+      "電著塗料",
+      "水性"
+    ],
+    "production_method": "LCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 1,
+      "general_industrial_coating": 0,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "230",
+      "tinting_strength": "89",
+      "volatile_matter_950c": "0.6",
+      "oil_absorption_number": "45",
+      "ph_value": "9.0",
+      "ash_content": "0.15",
+      "bet_surface_area": "48",
+      "average_primary_particle_size_nm": "47"
+    }
+  },
+  {
+    "product_name": "PRINTEX® 300",
+    "brand_code": "orion",
+    "featured_categories": [
+      "電著塗料",
+      "水性"
+    ],
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 1,
+      "general_industrial_coating": 0,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "242",
+      "tinting_strength": "108",
+      "volatile_matter_950c": "0.8",
+      "oil_absorption_number": "68",
+      "ph_value": "9.5",
+      "ash_content": "0.20",
+      "bet_surface_area": "80",
+      "average_primary_particle_size_nm": "27"
+    }
+  },
+  {
+    "product_name": "PRINTEX® G",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料",
+      "水性",
+      "溶劑型"
+    ],
+    "production_method": "LCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 1,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "223",
+      "tinting_strength": "57",
+      "volatile_matter_950c": "0.7",
+      "oil_absorption_number": "104",
+      "ph_value": "9.0",
+      "ash_content": "0.10",
+      "bet_surface_area": "35",
+      "average_primary_particle_size_nm": "51"
+    }
+  },
+  {
+    "product_name": "SPECIAL BLACK 6",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "HCG",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "275",
+      "tinting_strength": "128",
+      "volatile_matter_950c": "18.0",
+      "oil_absorption_number": "142",
+      "ph_value": "2.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "450",
+      "average_primary_particle_size_nm": "17"
+    }
+  },
+  {
+    "product_name": "SPECIAL BLACK 5",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "溶劑型"
+    ],
+    "production_method": "MCG",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "269",
+      "tinting_strength": "115",
+      "volatile_matter_950c": "15.0",
+      "oil_absorption_number": "125",
+      "ph_value": "2.5",
+      "ash_content": "0.02",
+      "bet_surface_area": "320",
+      "average_primary_particle_size_nm": "20"
+    }
+  },
+  {
+    "product_name": "SPECIAL BLACK 4",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "RCG",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 1,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "244",
+      "tinting_strength": "107",
+      "volatile_matter_950c": "14.0",
+      "oil_absorption_number": "115",
+      "ph_value": "3.0",
+      "ash_content": "0.02",
+      "bet_surface_area": "180",
+      "average_primary_particle_size_nm": "25"
+    }
+  },
+  {
+    "product_name": "SPECIAL BLACK 4A",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料",
+      "溶劑型",
+      "粉體塗料"
+    ],
+    "production_method": "RCG",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 1,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "244",
+      "tinting_strength": "107",
+      "volatile_matter_950c": "14.0",
+      "oil_absorption_number": "95",
+      "ph_value": "3.0",
+      "ash_content": "0.02",
+      "bet_surface_area": "180",
+      "average_primary_particle_size_nm": "25"
+    }
+  },
+  {
+    "product_name": "SPECIAL BLACK 250",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "溶劑型"
+    ],
+    "production_method": "LCF",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "220",
+      "tinting_strength": "88",
+      "volatile_matter_950c": "1.4",
+      "oil_absorption_number": "45",
+      "ph_value": "3.5",
+      "ash_content": "0.30",
+      "bet_surface_area": "48",
+      "average_primary_particle_size_nm": "47"
+    }
+  },
+  {
+    "product_name": "SPECIAL BLACK 100",
+    "brand_code": "orion",
+    "featured_categories": [
+      "一般工業塗料",
+      "建築塗料",
+      "溶劑型"
+    ],
+    "production_method": "LCF",
+    "system": {
+      "waterborne": 0,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 1,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "blackness_my": "217",
+      "tinting_strength": "60",
+      "volatile_matter_950c": "1.6",
+      "oil_absorption_number": "100",
+      "ph_value": "3.3",
+      "ash_content": "0.10",
+      "bet_surface_area": "35",
+      "average_primary_particle_size_nm": "51"
+    }
+  },
+  {
+    "product_name": "XPB 700",
+    "brand_code": "orion",
+    "production_method": "HCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 1,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "145",
+      "volatile_matter_950c": "4",
+      "oil_absorption_number": "75",
+      "ph_value": "3",
+      "ash_content": "0.3",
+      "bet_surface_area": "275",
+      "average_primary_particle_size_nm": "15"
+    }
+  },
+  {
+    "product_name": "XPB 685",
+    "brand_code": "orion",
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 1,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 0
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "117",
+      "volatile_matter_950c": "2",
+      "oil_absorption_number": "114",
+      "ph_value": "9",
+      "ash_content": "0.5",
+      "bet_surface_area": "120",
+      "average_primary_particle_size_nm": "23"
+    }
+  },
+  {
+    "product_name": "XPB 650",
+    "brand_code": "orion",
+    "production_method": "RCF",
+    "system": {
+      "waterborne": 1,
+      "solvent_borne": 0,
+      "energy curable coatings and inks": 0,
+      "powder_coating": 1
+    },
+    "applications": {
+      "automotive_coatings": 0,
+      "electro_deposition_coatings": 0,
+      "general_industrial_coating": 1,
+      "metallics": 0,
+      "decorative_coating": 0,
+      "wet_pu_coloring": 0,
+      "antistatic_and_conductive_coating": 0
+    },
+    "typical_properties": {
+      "tinting_strength": "1.6",
+      "volatile_matter_950c": "1",
+      "oil_absorption_number": "61",
+      "ph_value": "8",
+      "ash_content": "0.5",
+      "bet_surface_area": "85",
+      "average_primary_particle_size_nm": "26"
+    }
+  }
+]

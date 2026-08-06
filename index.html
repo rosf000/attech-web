@@ -96,14 +96,6 @@
             background-color: #eff6ff !important;
         }
 
-        #toast-container {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 100;
-        }
-
         .fallback-img {
             position: relative;
             display: inline-block;
@@ -123,11 +115,6 @@
             text-align: center;
             border-radius: 8px;
             z-index: 2;
-        }
-
-        .honeypot-field {
-            display: none !important;
-            visibility: hidden !important;
         }
 
         .optimized-container {
@@ -196,6 +183,20 @@
         .sticky-table table td.whitespace-nowrap {
             white-space: nowrap;
         }
+
+        /* Skeleton 動畫樣式 */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .4;
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-900 antialiased selection:bg-blue-800 selection:text-white">
@@ -203,11 +204,12 @@
 <!-- GTM (noscript) -->
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            class="hidden h-0 w-0"></iframe>
 </noscript>
 
 <!-- Toast 通知容器 -->
-<div id="toast-container" class="hidden pointer-events-none" role="status" aria-live="polite">
+<div id="toast-container" class="hidden pointer-events-none fixed bottom-[20px] left-1/2 -translate-x-1/2 z-[100]"
+     role="status" aria-live="polite">
     <div id="toast-message"
          class="bg-slate-900 text-white px-5 py-2.5 rounded-xl shadow-2xl flex items-center gap-2.5 text-sm font-bold">
         <i class="fa-solid fa-circle-check text-emerald-400 text-lg" aria-hidden="true"></i>
@@ -232,14 +234,14 @@
                 </div>
             </div>
 
-            <!-- 全域導覽列搜尋框 -->
+            <!-- 全域導覽列搜尋框（桌面版） -->
             <div class="flex-1 max-w-sm mx-2 hidden sm:block">
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <i class="fa-solid fa-search text-gray-500 text-xs" aria-hidden="true"></i>
                     </div>
-                    <input type="text" id="navbar-global-search"
-                           class="bg-gray-100 border border-gray-300 text-slate-900 text-xs rounded-lg focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-600 block w-full pl-8 pr-3 py-1.5 font-medium transition-all placeholder-slate-500"
+                    <input type="text"
+                           class="global-search-input bg-gray-100 border border-gray-300 text-slate-900 text-xs rounded-lg focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-blue-600 block w-full pl-8 pr-3 py-1.5 font-medium transition-all placeholder-slate-500"
                            placeholder="搜尋產品名稱、型號、成分..."
                            oninput="debouncedSearch(this.value)">
                 </div>
@@ -268,23 +270,24 @@
                 <div class="bg-gray-100 p-1 rounded-md flex border border-slate-200" role="group"
                      aria-label="Language Switcher">
                     <button onclick="switchLanguage('zh')" id="lang-zh-btn" aria-label="切換為中文"
-                            class="px-3 py-0.5 text-xs font-bold rounded shadow-sm bg-white text-blue-950">中
+                            class="lang-btn px-3 py-0.5 text-xs font-bold rounded shadow-sm bg-white text-blue-950">中
                     </button>
                     <button onclick="switchLanguage('en')" id="lang-en-btn" aria-label="Switch to English"
-                            class="px-3 py-0.5 text-xs font-medium rounded text-slate-600 hover:text-slate-900">EN
+                            class="lang-btn px-3 py-0.5 text-xs font-medium rounded text-slate-600 hover:text-slate-900">
+                        EN
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- 行動裝置搜尋框 -->
+        <!-- 全域導覽列搜尋框（行動裝置版） -->
         <div class="block sm:hidden pb-2.5">
             <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <i class="fa-solid fa-search text-slate-500 text-xs" aria-hidden="true"></i>
                 </div>
-                <input type="text" id="navbar-global-search-mobile"
-                       class="bg-gray-100 border border-gray-300 text-slate-900 text-xs rounded-lg focus:bg-white focus:ring-2 focus:ring-blue-600 block w-full pl-8 pr-3 py-1.5 font-medium placeholder-slate-500"
+                <input type="text"
+                       class="global-search-input bg-gray-100 border border-gray-300 text-slate-900 text-xs rounded-lg focus:bg-white focus:ring-2 focus:ring-blue-600 block w-full pl-8 pr-3 py-1.5 font-medium placeholder-slate-500"
                        placeholder="全域搜尋產品..."
                        oninput="debouncedSearch(this.value)">
             </div>
@@ -328,7 +331,7 @@
                                         <source srcset="https://www.micropowders.com/assets/img/MCP-Logo.png"
                                                 type="image/webp">
                                         <img src="./img/MCP-Logo.png" alt="MPI POWDERS" loading="lazy"
-                                             onError="this.onerror=null;this.src='./img/MCP-Logo.png';"
+                                             onError="handleImageFallback(this, './img/MCP-Logo.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
                                 </button>
@@ -371,7 +374,7 @@
                                         <source srcset="https://tyzor.dorfketal.com/img/logo/DK-logo-notag1.png"
                                                 type="image/webp">
                                         <img src="./img/dorf-ketal.png" alt="DORF KETAL" loading="lazy"
-                                             onError="this.onerror=null;this.src='./img/dorf-ketal.png';"
+                                             onError="handleImageFallback(this, './img/dorf-ketal.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
                                 </button>
@@ -417,7 +420,7 @@
                                         <source srcset="https://s202.q4cdn.com/321217073/files/design/orion_new_logo_white.png"
                                                 type="image/webp">
                                         <img src="./img/orion_new_logo_white.png" alt="ORION" loading="lazy"
-                                             onError="this.onerror=null;this.src='./img/orion_new_logo_white.png';"
+                                             onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
                                 </button>
@@ -459,6 +462,7 @@
                                     <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"
                                          alt="其他特用塗料產品"
                                          loading="lazy"
+                                         onError="handleImageFallback(this);"
                                          class="w-full h-full object-cover opacity-80 transition-transform duration-300 group-hover:scale-110">
                                     <span class="absolute inset-0 bg-slate-950/60 flex items-center justify-center font-bold text-xs text-white backdrop-blur-[1px]">其他特化材料</span>
                                 </button>
@@ -596,17 +600,20 @@
                     <button onclick="AppState.set('partner', 'MPI')" id="btn-partner-MPI" aria-label="MPI Powders"
                             class="p-2 rounded border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center h-14 active:scale-95 ring-4 ring-blue-400">
                         <img src="./img/MCP-Logo.png" alt="MPI POWDERS" loading="lazy"
+                             onError="handleImageFallback(this, './img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
                     <button onclick="AppState.set('partner', 'DorfKetal')" id="btn-partner-DorfKetal"
                             aria-label="DORF KETAL"
                             class="p-2 rounded border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center h-14 active:scale-95 opacity-50">
                         <img src="./img/dorf-ketal.png" alt="DORF KETAL" loading="lazy"
+                             onError="handleImageFallback(this, './img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
                     <button onclick="AppState.set('partner', 'Orion')" id="btn-partner-Orion" aria-label="ORION"
                             class="p-2 rounded border border-slate-700 bg-slate-950 shadow-sm flex items-center justify-center h-14 active:scale-95 opacity-50">
                         <img src="./img/orion_new_logo_white.png" alt="ORION" loading="lazy"
+                             onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
                     <button onclick="AppState.set('partner', 'Others')" id="btn-partner-Others" aria-label="其他品牌"
@@ -681,6 +688,7 @@
                     <a href="https://www.micropowders.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="Micro Powders 官網">
                         <img src="./img/MCP-Logo.png" alt="MPI POWDERS" loading="lazy"
+                             onError="handleImageFallback(this, './img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
@@ -688,6 +696,7 @@
                     <a href="https://dkatalyst.com/products/tyzor/" target="_blank" rel="noopener noreferrer"
                        aria-label="DorfKetal 官網">
                         <img src="./img/dorf-ketal.png" alt="DORF KETAL" loading="lazy"
+                             onError="handleImageFallback(this, './img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
@@ -695,6 +704,7 @@
                     <a href="https://superblackcoatings.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="Orion 官網">
                         <img src="./img/orion_new_logo_white.png" alt="ORION" loading="lazy"
+                             onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
@@ -702,6 +712,7 @@
                     <a href="http://www.jietondachem.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="捷通達 官網">
                         <img src="./img/jietondachem.png" alt="jietondachem" loading="lazy"
+                             onError="handleImageFallback(this, './img/jietondachem.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
                 </div>
@@ -800,7 +811,7 @@
 
                     <input type="hidden" name="csrf_token" id="csrf_token" value="EXAMPLETTOKEN123456789">
 
-                    <div class="honeypot-field">
+                    <div class="hidden !p-0 !m-0 border-0">
                         <label for="website_hp">If you are human, leave this empty:</label>
                         <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off">
                     </div>
@@ -1388,6 +1399,42 @@
     let lastSubmitTime = 0;
     let searchDebounceTimer = null;
 
+    // SVG 占位圖 Data URI
+    const SVG_PLACEHOLDER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='11' font-weight='bold' fill='%2394a3b8'%3ENo Image%3C/text%3E%3C/svg%3E";
+
+    // 圖片 Fallback 機制
+    function handleImageFallback(img, localSrc) {
+        if (!img.dataset.fallbackStep) {
+            img.dataset.fallbackStep = "1";
+            if (localSrc) {
+                img.src = localSrc;
+                return;
+            }
+        }
+        img.onerror = null;
+        img.src = SVG_PLACEHOLDER;
+        img.classList.add('opacity-70');
+    }
+
+    // 渲染表格骨架屏 (Skeleton Rows)
+    function renderTableSkeleton(rowCount = 5, colCount = 5) {
+        const tbody = document.getElementById('directory-matrix-body');
+        if (!tbody) return;
+
+        const skeletonRows = Array.from({length: rowCount}).map(() => `
+            <tr class="animate-pulse border-b border-gray-200">
+                ${Array.from({length: colCount}).map(() => `
+                    <td class="py-3 px-3.5">
+                        <div class="h-4 bg-slate-200 rounded w-3/4 mb-1"></div>
+                        <div class="h-3 bg-slate-100 rounded w-1/2"></div>
+                    </td>
+                `).join('')}
+            </tr>
+        `).join('');
+
+        tbody.innerHTML = skeletonRows;
+    }
+
     // ==========================================
     // 1. 全局狀態與對應字典
     // ==========================================
@@ -1543,10 +1590,12 @@
     }
 
     // ==========================================
-    // 2. 資料加載層
+    // 2. 資料加載層 (含 Skeleton Rows 觸發)
     // ==========================================
     class ProductRepository {
         static async loadBrandData(partnerKey) {
+            renderTableSkeleton(6, 6);
+
             const configKey = partnerConfigMap[partnerKey] || 'mpi';
             const brandConfig = AppState.configs[configKey];
             if (!brandConfig || !brandConfig.files) return [];
@@ -2162,24 +2211,33 @@
                     getValue: p => p.product_name
                 },
                 {
+                    id: 'production_method',
+                    propKey: 'production_method',
+                    title: '生產方法',
+                    class: 'w-[70px] min-w-[70px] font-bold text-blue-950 whitespace-nowrap truncate',
+                    getValue: p => p.production_method
+                },
+
+
+                {
                     id: 'blackness',
                     propKey: 'blackness_my',
                     title: '黑度 (My)',
-                    class: 'w-[90px] min-w-[90px] text-center font-medium text-slate-900 whitespace-nowrap',
+                    class: 'w-[70px] min-w-[70px] text-center font-medium text-slate-900 whitespace-nowrap',
                     getValue: p => p.typical_properties?.blackness_my
                 },
                 {
                     id: 'tinting',
                     propKey: 'tinting_strength',
                     title: '著色力',
-                    class: 'w-[90px] min-w-[90px] text-center font-medium text-slate-900 whitespace-nowrap',
+                    class: 'w-[80px] min-w-[80px] text-center font-medium text-slate-900 whitespace-nowrap',
                     getValue: p => p.typical_properties?.tinting_strength
                 },
                 {
                     id: 'particle_size',
                     propKey: 'average_primary_particle_size_nm',
                     title: '原生粒徑 (nm)',
-                    class: 'w-[100px] min-w-[100px] text-center font-medium text-slate-900 whitespace-nowrap',
+                    class: 'w-[80px] min-w-[80px] text-center font-medium text-slate-900 whitespace-nowrap',
                     getValue: p => p.typical_properties?.average_primary_particle_size_nm
                 },
                 {
@@ -2193,28 +2251,28 @@
                     id: 'oil',
                     propKey: 'oil_absorption_number',
                     title: '吸油量',
-                    class: 'w-[100px] min-w-[100px] text-center font-medium text-slate-900 whitespace-nowrap',
+                    class: 'w-[60px] min-w-[60px] text-center font-medium text-slate-900 whitespace-nowrap',
                     getValue: p => p.typical_properties?.oil_absorption_number
                 },
                 {
                     id: 'ph',
                     propKey: 'ph_value',
                     title: 'pH',
-                    class: 'w-[70px] min-w-[70px] text-center font-medium text-slate-900 whitespace-nowrap',
+                    class: 'w-[40px] min-w-[40px] text-center font-medium text-slate-900 whitespace-nowrap',
                     getValue: p => p.typical_properties?.ph_value
                 },
                 {
                     id: 'volatile',
                     propKey: 'volatile_matter_950c',
                     title: '揮發分(%)',
-                    class: 'w-[100px] min-w-[100px] text-center font-medium text-slate-900 whitespace-nowrap',
+                    class: 'w-[80px] min-w-[80px] text-center font-medium text-slate-900 whitespace-nowrap',
                     getValue: p => p.typical_properties?.volatile_matter_950c
                 },
                 {
                     id: 'ash',
                     propKey: 'ash_content',
                     title: '灰分(%)',
-                    class: 'w-[90px] min-w-[90px] text-center font-medium text-slate-900 whitespace-nowrap',
+                    class: 'w-[80px] min-w-[80px] text-center font-medium text-slate-900 whitespace-nowrap',
                     getValue: p => p.typical_properties?.ash_content
                 }
             ]
@@ -2331,6 +2389,9 @@
             return (p.featured_categories || []).map(c => `<span class="bg-blue-100 text-blue-900 border border-blue-200 font-bold px-1.5 py-0.5 rounded mr-1">${c}</span>`).join('') || '—';
         }
 
+        // 建立分數轉換字典
+        const plusMap = {1: '+', 2: '++', 3: '+++'};
+
         const categoryMeta = {
             "ptfe": {label: "PTFE取代", color: "text-blue-950 bg-blue-100 border border-blue-200"},
             "scratch_and_abrasion": {label: "耐刮磨", color: "text-amber-950 bg-amber-100 border border-amber-200"},
@@ -2343,22 +2404,26 @@
         Object.entries(featureConfig[AppState.lang]).forEach(([key, label]) => {
             if (shouldHideRatingKey(key, AppState.category, AppState.productLine)) return;
             const score = p.performance_ratings ? (p.performance_ratings[key] || 0) : 0;
-            if (score === 0) return;
+
+            if (score < 3) return;
 
             const cat = featureCategories[key] || 'scratch_and_abrasion';
             let colorClass = "";
 
             if (cat === 'ptfe') {
-                colorClass = score >= 3 ? 'bg-blue-700 text-white font-bold shadow-sm' : 'bg-blue-100 text-blue-950 border border-blue-300 font-medium';
+                colorClass = 'bg-blue-700 text-white font-bold shadow-sm';
             } else if (cat === 'scratch_and_abrasion') {
-                colorClass = score >= 3 ? 'bg-amber-700 text-white font-bold shadow-sm' : 'bg-amber-100 text-amber-950 border border-amber-300 font-medium';
+                colorClass = 'bg-amber-700 text-white font-bold shadow-sm';
             } else if (cat === 'texture') {
-                colorClass = score >= 3 ? 'bg-emerald-700 text-white font-bold shadow-sm' : 'bg-emerald-100 text-emerald-950 border border-emerald-300 font-medium';
+                colorClass = 'bg-emerald-700 text-white font-bold shadow-sm';
             } else if (cat === 'special') {
-                colorClass = score >= 3 ? 'bg-purple-700 text-white font-bold shadow-sm' : 'bg-purple-100 text-purple-950 border border-purple-300 font-medium';
+                colorClass = 'bg-purple-700 text-white font-bold shadow-sm';
             }
 
-            const badgeHtml = `<span class="text-[10px] px-1.5 py-0.5 rounded ${colorClass} inline-flex items-center gap-0.5">${label} <span class="text-[9px] opacity-90 font-bold">${score}</span></span>`;
+            // 將 score 轉成加號格式
+            const displayScore = plusMap[score] || score;
+
+            const badgeHtml = `<span class="text-[10px] px-1.5 py-0.5 rounded ${colorClass} inline-flex items-center gap-0.5">${label} <span class="text-[9px] opacity-90 font-bold">${displayScore}</span></span>`;
             if (categorizedBadges[cat]) {
                 categorizedBadges[cat].push(badgeHtml);
             }
@@ -2369,13 +2434,13 @@
             if (!badgeList || badgeList.length === 0) return '';
             const meta = categoryMeta[catKey];
             return `
-            <div class="flex items-center gap-1 text-[11px] my-0.5">
-                <span class="px-1 py-0.5 rounded ${meta.color} font-bold shrink-0 text-[9px] min-w-[55px] text-center">${meta.label}</span>
-                <div class="flex flex-wrap gap-1 items-center">${badgeList.join('')}</div>
-            </div>`;
+        <div class="flex items-center gap-1 text-[11px] my-0.5">
+            <span class="px-1 py-0.5 rounded ${meta.color} font-bold shrink-0 text-[9px] min-w-[55px] text-center">${meta.label}</span>
+            <div class="flex flex-wrap gap-1 items-center">${badgeList.join('')}</div>
+        </div>`;
         }).filter(Boolean).join('');
 
-        return badgeRowsHtml || `<span class="text-slate-400 italic text-[11px]">—</span>`;
+        return badgeRowsHtml || `<span class="text-slate-400 italic text-[11px]">（展開查看全部指標）</span>`;
     }
 
     function renderAccordionDetailCard(p) {
@@ -2401,6 +2466,22 @@
                 const label = featureConfig[AppState.lang][key] || key;
                 return `<li class="text-slate-800 mb-1"><strong class="text-slate-900 font-bold">${label}：</strong><span class="whitespace-pre-line font-normal">${desc}</span></li>`;
             }).join('');
+        const plusMap = {1: '+', 2: '++', 3: '+++'};
+
+        const allRatingsBadges = p.performance_ratings ? Object.entries(featureConfig[AppState.lang])
+            .map(([key, label]) => {
+                const score = p.performance_ratings[key] || 0;
+                if (score === 0) return '';
+                const colorClass = score >= 3
+                    ? 'bg-blue-700 text-white font-bold'
+                    : 'bg-slate-100 text-slate-700 border border-slate-300 font-medium';
+
+                // 轉換為加號顯示
+                const displayScore = plusMap[score] || score;
+
+                return `<span class="text-[10px] px-1.5 py-0.5 rounded ${colorClass} inline-flex items-center gap-0.5">${label} <span class="font-bold">${displayScore}</span></span>`;
+            }).filter(Boolean).join(' ') : '';
+
 
         return `
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs fade-in-down w-full max-w-full">
@@ -2428,6 +2509,14 @@
             </div>
 
             <div class="space-y-2.5">
+            <div class="bg-white p-3 rounded-lg border border-gray-300 shadow-sm">
+            <span class="text-[10px] text-blue-900 font-bold block mb-1.5 flex items-center gap-1">
+                <i class="fa-solid fa-star"></i> 所有性能指標評分 (All Performance Ratings)
+            </span>
+            <div class="flex flex-wrap gap-1">
+                ${allRatingsBadges || `<span class="text-slate-400 italic text-[11px]">無評分資料</span>`}
+            </div>
+        </div>
                 <div class="bg-white p-3 rounded-lg border border-gray-300 shadow-sm space-y-3">
                     <div>
                         <span class="text-[10px] text-blue-900 font-bold block mb-1 flex items-center gap-1"><i class="fa-solid fa-layer-group"></i> ${t.validated_apps}</span>
@@ -2738,6 +2827,11 @@
     // 6. 全局/跨領域搜尋引擎觸發邏輯
     // ==========================================
     function debouncedSearch(val) {
+        // 同步所有全域搜尋輸入框的值
+        document.querySelectorAll('.global-search-input').forEach(input => {
+            if (input.value !== val) input.value = val;
+        });
+
         clearTimeout(searchDebounceTimer);
         searchDebounceTimer = setTimeout(async () => {
             const query = val.trim();
@@ -2782,8 +2876,11 @@
         }
 
         for (const [configKey, brand] of Object.entries(AppState.configs)) {
-            const partnerMap = {'mpi': 'MPI', 'dorfketal': 'DorfKetal', 'orion': 'Orion', 'others': 'Others'};
-            const partnerName = partnerMap[configKey] || configKey;
+            // 直接使用全域的反向映射（partnerConfigMap 的 key/value 反轉）
+            const reversePartnerMap = Object.fromEntries(
+                Object.entries(partnerConfigMap).map(([k, v]) => [v, k])
+            );
+            const partnerName = reversePartnerMap[configKey] || configKey;
 
             for (const file of brand.files) {
                 const products = AppState.allProductsCache[file.key] || [];
@@ -2868,11 +2965,7 @@
     }
 
     function navigateToCategory(partner, lineKey, categoryKey = 'all', productName = null) {
-        AppState.searchQuery = '';
-        const searchInput = document.getElementById('navbar-global-search');
-        const searchMobileInput = document.getElementById('navbar-global-search-mobile');
-        if (searchInput) searchInput.value = '';
-        if (searchMobileInput) searchMobileInput.value = '';
+        resetSearchInputFields();
 
         AppState.partner = partner;
         AppState.productLine = lineKey;
@@ -2910,18 +3003,20 @@
         renderProducts();
     }
 
+    function resetSearchInputFields() {
+        AppState.searchQuery = '';
+        document.querySelectorAll('.global-search-input').forEach(input => input.value = '');
+    }
+
     function resetFilters() {
         AppState.filters = {};
-        AppState.searchQuery = '';
-        const searchInput = document.getElementById('navbar-global-search');
-        const searchMobileInput = document.getElementById('navbar-global-search-mobile');
-        if (searchInput) searchInput.value = '';
-        if (searchMobileInput) searchMobileInput.value = '';
+        resetSearchInputFields();
         initFilters();
         renderProducts();
     }
 
-    function switchTab(tabId) {
+    // 修改原本的 switchTab 函式，加入 updateUrl 參數
+    function switchTab(tabId, updateUrl = true) {
         document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
         const target = document.getElementById(`tab-${tabId}`);
         if (target) target.classList.add('active');
@@ -2938,13 +3033,33 @@
         }
 
         if (tabId === 'products') updatePartnerUI();
+        if (updateUrl) updateHashRoute();
     }
+
+    // 監聽 AppState 變更以自動同步 URL
+    const originalSet = AppState.set.bind(AppState);
+    AppState.set = function (key, value) {
+        originalSet(key, value);
+        updateHashRoute();
+    };
+
+    // 監聽瀏覽器 上一頁/下一頁 (popstate)
+    window.addEventListener('popstate', parseHashRoute);
 
     function switchLanguage(lang) {
         AppState.set('lang', lang);
     }
 
     function updateLanguageUI() {
+        // 更新語系按鈕 UI
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.className = "lang-btn px-3 py-0.5 text-xs font-medium rounded text-slate-600 hover:text-slate-900";
+        });
+        const activeLangBtn = document.getElementById(`lang-${AppState.lang}-btn`);
+        if (activeLangBtn) {
+            activeLangBtn.className = "lang-btn px-3 py-0.5 text-xs font-bold rounded shadow-sm bg-white text-blue-950";
+        }
+
         renderDirectoryTree();
         initFilters();
         renderProducts();
@@ -3023,6 +3138,56 @@
         event.target.reset();
     }
 
+    // 解析 Hash URL 並套用至 AppState
+    function parseHashRoute() {
+        const hash = window.location.hash.replace(/^#/, '');
+        if (!hash) return;
+
+        const [tabPart, queryPart] = hash.split('?');
+        const tabId = tabPart || 'about';
+        const params = new URLSearchParams(queryPart || '');
+
+        // 切換頁籤（避免觸發無限循環）
+        switchTab(tabId, false);
+
+        if (tabId === 'products') {
+            const partner = params.get('partner');
+            const line = params.get('line');
+            const category = params.get('category');
+
+            if (partner) AppState.partner = partner;
+            if (line) AppState.productLine = line;
+            if (category) AppState.category = category;
+
+            updatePartnerUI();
+        } else if (tabId === 'contact') {
+            const mode = params.get('mode');
+            if (mode) switchFormMode(mode);
+        }
+    }
+
+    // 更新 Hash URL (不觸發 hashchange 事件循環)
+    function updateHashRoute() {
+        const activeTab = document.querySelector('.tab-content.active')?.id.replace('tab-', '') || 'about';
+        const params = new URLSearchParams();
+
+        if (activeTab === 'products') {
+            if (AppState.partner) params.set('partner', AppState.partner);
+            if (AppState.productLine) params.set('line', AppState.productLine);
+            if (AppState.category && AppState.category !== 'all') params.set('category', AppState.category);
+        } else if (activeTab === 'contact') {
+            const isQuick = !document.getElementById('form-mode-quick')?.classList.contains('hidden');
+            params.set('mode', isQuick ? 'quick' : 'detailed');
+        }
+
+        const queryString = params.toString();
+        const newHash = `#${activeTab}${queryString ? '?' + queryString : ''}`;
+
+        if (window.location.hash !== newHash) {
+            history.pushState(null, '', newHash);
+        }
+    }
+
     const uiText = {
         zh: {
             unselected_path: '未選取分類',
@@ -3066,7 +3231,35 @@
         }
     };
 
+    document.addEventListener("DOMContentLoaded", () => {
+        // 監聽表格內的點擊事件
+        document.getElementById('directory-matrix-body').addEventListener('click', (e) => {
+            const targetBtn = e.target.closest('button[data-action]');
+            if (targetBtn) {
+                e.stopPropagation();
+                openModal(targetBtn.dataset.product, targetBtn.dataset.action);
+                return;
+            }
 
+            const row = e.target.closest('tr[data-product-name]');
+            if (row) {
+                toggleProductDetail(row.dataset.index, row.dataset.productName);
+            }
+        });
+
+        // 載入品牌設定檔並初始化路由狀態
+        fetch('config.json')
+            .then(res => res.ok ? res.json() : AppState.configs)
+            .then(configData => {
+                AppState.configs = configData;
+                parseHashRoute(); // 依據網址 Hash 初始化頁籤與產品
+                if (!window.location.hash) updatePartnerUI();
+            })
+            .catch(() => {
+                parseHashRoute();
+                if (!window.location.hash) updatePartnerUI();
+            });
+    });
 </script>
 
 </body>

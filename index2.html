@@ -51,8 +51,11 @@
     <link rel="stylesheet" href="./css/output.css">
 
     <!-- FontAwesome 非同步非阻塞載入 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
     <!-- reCAPTCHA v3 防火牆機制 - 避免無效金鑰觸發 400 報錯扣分 -->
     <script>
@@ -265,19 +268,23 @@
             </div>
 
             <div class="hidden md:flex sm:space-x-5 items-center shrink-0" role="tablist" aria-label="網站主要選單">
-                <button onclick="switchTab('about')" id="nav-about" role="tab" aria-selected="true" aria-controls="tab-about"
+                <button onclick="switchTab('about')" id="nav-about" role="tab" aria-selected="true"
+                        aria-controls="tab-about"
                         class="nav-btn text-blue-950 font-bold border-b-2 border-blue-900 px-1 pt-1 text-sm">
                     關於宏威
                 </button>
-                <button onclick="switchTab('products')" id="nav-products" role="tab" aria-selected="false" aria-controls="tab-products"
+                <button onclick="switchTab('products')" id="nav-products" role="tab" aria-selected="false"
+                        aria-controls="tab-products"
                         class="nav-btn text-slate-700 hover:text-blue-900 font-medium border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 text-sm">
                     產品與規格
                 </button>
-                <button onclick="switchTab('partners')" id="nav-partners" role="tab" aria-selected="false" aria-controls="tab-partners"
+                <button onclick="switchTab('partners')" id="nav-partners" role="tab" aria-selected="false"
+                        aria-controls="tab-partners"
                         class="nav-btn text-slate-700 hover:text-blue-900 font-medium border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 text-sm">
                     合作夥伴
                 </button>
-                <button onclick="switchTab('contact')" id="nav-contact" role="tab" aria-selected="false" aria-controls="tab-contact"
+                <button onclick="switchTab('contact')" id="nav-contact" role="tab" aria-selected="false"
+                        aria-controls="tab-contact"
                         class="nav-btn text-slate-700 hover:text-blue-900 font-medium border-b-2 border-transparent hover:border-gray-400 px-1 pt-1 text-sm">
                     聯絡我們
                 </button>
@@ -322,7 +329,8 @@
                         type="image/webp">
                 <!-- 首屏關鍵 Hero 圖片（Eager 載入與預留寬高，非同步解碼） -->
                 <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1600&q=80"
-                     alt="背景圖片" width="1600" height="900" loading="eager" decoding="async" class="w-full h-full object-cover">
+                     alt="背景圖片" width="1600" height="900" loading="eager" decoding="async"
+                     class="w-full h-full object-cover">
             </picture>
             <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/95 to-slate-950/80 z-10"></div>
 
@@ -348,7 +356,8 @@
                                     <picture class="flex items-center justify-center w-full h-full">
                                         <source srcset="https://www.micropowders.com/assets/img/MCP-Logo.png"
                                                 type="image/webp">
-                                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80" loading="lazy" decoding="async"
+                                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80"
+                                             loading="lazy" decoding="async"
                                              onError="handleImageFallback(this, './img/MCP-Logo.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
@@ -391,7 +400,8 @@
                                     <picture class="flex items-center justify-center w-full h-full">
                                         <source srcset="https://tyzor.dorfketal.com/img/logo/DK-logo-notag1.png"
                                                 type="image/webp">
-                                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80" loading="lazy" decoding="async"
+                                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80"
+                                             loading="lazy" decoding="async"
                                              onError="handleImageFallback(this, './img/dorf-ketal.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
@@ -437,7 +447,8 @@
                                     <picture class="flex items-center justify-center w-full h-full">
                                         <source srcset="https://s202.q4cdn.com/321217073/files/design/orion_new_logo_white.png"
                                                 type="image/webp">
-                                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="200" height="80" loading="lazy" decoding="async"
+                                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="200" height="80"
+                                             loading="lazy" decoding="async"
                                              onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                                              class="fallback-img max-h-10 max-w-full object-contain filter drop-shadow brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-transform duration-300 group-hover:scale-110">
                                     </picture>
@@ -617,20 +628,23 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                     <button onclick="AppState.set('partner', 'MPI')" id="btn-partner-MPI" aria-label="MPI Powders"
                             class="p-2 rounded border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center h-14 active:scale-95 ring-4 ring-blue-400">
-                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="160" height="50" loading="lazy" decoding="async"
+                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="160" height="50" loading="lazy"
+                             decoding="async"
                              onError="handleImageFallback(this, './img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
                     <button onclick="AppState.set('partner', 'DorfKetal')" id="btn-partner-DorfKetal"
                             aria-label="DORF KETAL"
                             class="p-2 rounded border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center h-14 active:scale-95 opacity-50">
-                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="160" height="50" loading="lazy" decoding="async"
+                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="160" height="50" loading="lazy"
+                             decoding="async"
                              onError="handleImageFallback(this, './img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
                     <button onclick="AppState.set('partner', 'Orion')" id="btn-partner-Orion" aria-label="ORION"
                             class="p-2 rounded border border-slate-700 bg-slate-950 shadow-sm flex items-center justify-center h-14 active:scale-95 opacity-50">
-                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="160" height="50" loading="lazy" decoding="async"
+                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="160" height="50" loading="lazy"
+                             decoding="async"
                              onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </button>
@@ -703,7 +717,8 @@
                 <div class="p-5 border border-gray-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://www.micropowders.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="Micro Powders 官網">
-                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80" loading="lazy" decoding="async"
+                        <img src="./img/MCP-Logo.png" alt="MPI POWDERS" width="200" height="80" loading="lazy"
+                             decoding="async"
                              onError="handleImageFallback(this, './img/MCP-Logo.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
@@ -711,7 +726,8 @@
                 <div class="p-5 border border-gray-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://dkatalyst.com/products/tyzor/" target="_blank" rel="noopener noreferrer"
                        aria-label="DorfKetal 官網">
-                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80" loading="lazy" decoding="async"
+                        <img src="./img/dorf-ketal.png" alt="DORF KETAL" width="200" height="80" loading="lazy"
+                             decoding="async"
                              onError="handleImageFallback(this, './img/dorf-ketal.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
@@ -719,7 +735,8 @@
                 <div class="p-5 border border-slate-700 bg-slate-950 shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="https://superblackcoatings.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="Orion 官網">
-                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="200" height="80" loading="lazy" decoding="async"
+                        <img src="./img/orion_new_logo_white.png" alt="ORION" width="200" height="80" loading="lazy"
+                             decoding="async"
                              onError="handleImageFallback(this, './img/orion_new_logo_white.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
@@ -727,7 +744,8 @@
                 <div class="p-5 border border-slate-200 bg-white shadow-sm w-full h-28 flex items-center justify-center rounded-xl">
                     <a href="http://www.jietondachem.com/" target="_blank" rel="noopener noreferrer"
                        aria-label="捷通達 官網">
-                        <img src="./img/jietondachem.png" alt="jietondachem" width="200" height="80" loading="lazy" decoding="async"
+                        <img src="./img/jietondachem.png" alt="jietondachem" width="200" height="80" loading="lazy"
+                             decoding="async"
                              onError="handleImageFallback(this, './img/jietondachem.png');"
                              class="fallback-img max-h-full max-w-full object-contain">
                     </a>
@@ -2218,6 +2236,57 @@
                     render: p => `<span class="whitespace-pre-line leading-relaxed font-normal text-slate-800">${p.suggested_use_level_zh || '—'}</span>`
                 }
             ],
+            'dorfketal_silane': [
+                {
+                    id: 'product_name',
+                    title: '產品名稱',
+                    class: 'whitespace-nowrap font-bold text-blue-950',
+                    getValue: p => p.product_name
+                },
+                {
+                    id: 'comp',
+                    title: '描述\n主成分',
+                    class: 'min-w-[100px]',
+                    getValue: p => p.chemical_component || p.composition_zh,
+                    render: p => `<span class="whitespace-pre-line leading-relaxed font-normal text-slate-800">${p.chemical_component || p.composition_zh || '—'}</span>`
+                },
+                {
+                    id: 'density',
+                    title: '密度',
+                    class: 'min-w-[50px]',
+                    getValue: p => p.typical_properties?.density_g_cc_25c,
+                    render: p => `<span class="whitespace-pre-line leading-relaxed font-normal text-slate-800">${p.typical_properties?.density_g_cc_25c || '—'}</span>`
+                },
+                {
+                    id: 'flash_point',
+                    title: '閃點°C',
+                    class: 'min-w-[50px]',
+                    getValue: p => p.typical_properties?.flash_point,
+                    render: p => `<span class="whitespace-pre-line leading-relaxed font-normal text-slate-800">${p.typical_properties?.flash_point || '—'}</span>`
+                },
+                {
+                    id: 'boiling_point',
+                    title: '沸點°C',
+                    class: 'min-w-[50px]',
+                    getValue: p => p.typical_properties?.boiling_point,
+                    render: p => `<span class="whitespace-pre-line leading-relaxed font-normal text-slate-800">${p.typical_properties?.boiling_point || '—'}</span>`
+                },
+                {
+                    id: 'ph_value',
+                    title: 'pH',
+                    class: 'min-w-[50px]',
+                    getValue: p => p.typical_properties?.ph_value,
+                    render: p => `<span class="whitespace-pre-line leading-relaxed font-normal text-slate-800">${p.typical_properties?.ph_value || '—'}</span>`
+                },
+                {
+                    id: 'properties',
+                    title: '特性 / 優點',
+                    class: 'min-w-[250px]',
+                    getValue: p => p.properties,
+                    render: p => `<span class="whitespace-pre-line leading-relaxed font-normal text-slate-800">${p.properties || '—'}</span>`
+                }
+            ],
+
             'orion': [
                 {
                     id: 'product_name',
@@ -2310,7 +2379,13 @@
 
             let keyToUse = partnerKey;
             if (partnerKey === 'dorfketal') {
-                keyToUse = (AppState.productLine === 'px') ? 'dorfketal_px' : 'dorfketal_tyzor';
+                if (AppState.productLine === 'px') {
+                    keyToUse = 'dorfketal_px';
+                } else if (AppState.productLine === 'silane' || AppState.productLine === 'dorfketal_silane') {
+                    keyToUse = 'dorfketal_silane';
+                } else {
+                    keyToUse = 'dorfketal_tyzor';
+                }
             }
 
             let definitions = this.fieldDefinitions[keyToUse] || this.fieldDefinitions['mpi'];
@@ -2594,14 +2669,23 @@
         if (!treeMenu || !brandConfig) return;
 
         const iconMap = {
-            'ptfe': 'fa-leaf', 'powder': 'fa-cubes', 'industrial': 'fa-industry',
-            'ink': 'fa-newspaper', 'ink_impact': 'fa-newspaper', 'industrial floor': 'fa-layer-group',
-            'leather': 'fa-shoe-prints', 'wood': 'fa-tree', 'tyzor': 'fa-vial',
-            'coating': 'fa-spray-can', 'carbon_black': 'fa-circle',
-            'coating_additive': 'fa-vial-circle-check', 'matting_agent': 'fa-border-none',
-            'cpo_adhesion_promoter': 'fa-link',
-            'maleic_acid_resin': 'fa-flask'
-        };
+    'ptfe': 'fa-leaf',
+    'powder': 'fa-cubes',
+    'industrial': 'fa-industry',
+    'ink': 'fa-newspaper',
+    'ink_impact': 'fa-newspaper',
+    'industrial floor': 'fa-layer-group',
+    'leather': 'fa-shoe-prints',
+    'wood': 'fa-tree',
+    'tyzor': 'fa-vial',
+    'silane': 'fa-atom', // <- 新增 Silane 矽烷類別圖示
+    'coating': 'fa-spray-can',
+    'carbon_black': 'fa-circle',
+    'coating_additive': 'fa-vial-circle-check',
+    'matting_agent': 'fa-border-none',
+    'cpo_adhesion_promoter': 'fa-link',
+    'maleic_acid_resin': 'fa-flask'
+};
 
         treeMenu.innerHTML = brandConfig.files.map(file => {
             const lineKey = file.key;

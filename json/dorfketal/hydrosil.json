@@ -1,0 +1,195 @@
+[
+  {
+    "product_name": "Hydrosil 1151",
+    "composition_zh": "氨基矽烷",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Hydrosil"
+    ],
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.06,
+      "ph_value": "10-12",
+      "flash_point": 80,
+      "boiling_point": "N/A"
+    },
+    "properties": ""
+  },
+  {
+    "product_name": "Hydrosil 1153",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Hydrosil"
+    ],
+    "composition_zh": "氨基矽烷",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.16,
+      "ph_value": "11.5-12.0",
+      "flash_point": 95,
+      "boiling_point": "N/A"
+    },
+    "properties": ""
+  },
+  {
+    "product_name": "Hydrosil 2926",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Hydrosil"
+    ],
+    "composition_zh": "Diol",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 1,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.09,
+      "ph_value": "2-3",
+      "flash_point": 95,
+      "boiling_point": "N/A"
+    },
+    "properties": ""
+  },
+  {
+    "product_name": "Hydrosil 2627",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Hydrosil"
+    ],
+    "composition_zh": "氨基/烷基矽烷",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.05,
+      "ph_value": "10-11.4",
+      "flash_point": 95
+    },
+    "properties": ""
+  },
+  {
+    "product_name": "Hydrosil 2909",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Hydrosil"
+    ],
+    "composition_zh": "氨基/烷基矽烷",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.09,
+      "ph_value": "4-5",
+      "flash_point": 95
+    },
+    "properties": ""
+  },
+  {
+    "product_name": "Hydrosil 2776",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Hydrosil"
+    ],
+    "composition_zh": "雙氨基/烷基矽烷",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.1,
+      "ph_value": "10-11",
+      "flash_point": 100
+    },
+    "properties": "N/A"
+  },
+  {
+    "product_name": "Hydrosil 2907",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Hydrosil"
+    ],
+    "composition_zh": "氨基/乙烯基矽烷",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.125,
+      "ph_value": "3.5-5",
+      "flash_point": 95,
+      "boiling_point": "N/A"
+    },
+    "properties": ""
+  }
+]

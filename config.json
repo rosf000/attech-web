@@ -145,7 +145,18 @@
           "Metal Removal Fluids": "metal_removal_fluids",
           "Metal Forming Lubricants": "metal_forming_lubricants"
         }
+      },
+      {
+        "key": "silane",
+        "jsonPath": "./json/dorfketal/silane.json",
+        "titleZh": "矽烷偶合劑",
+        "titleEn": "Silane coupling agent",
+        "categoryMap": {
+
+        }
       }
+
+
     ]
   },
   "orion": {

@@ -1,0 +1,170 @@
+[
+  {
+    "product_name": "Sivo 110",
+    "composition_zh": "Diol",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Dynasylan Sivo"
+    ],
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 0,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.15,
+      "ph_value": "4-7",
+      "flash_point": 90,
+      "boiling_point": "92"
+    },
+    "properties": "N/A"
+  },
+  {
+    "product_name": "Sivo 140",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Dynasylan Sivo"
+    ],
+    "composition_zh": "氨基/烷基矽烷",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 0,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 0,
+      "surface_modifier": 0
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.09,
+      "ph_value": "3-4.5",
+      "flash_point": "N/A",
+      "boiling_point": "N/A"
+    },
+    "properties": "N/A"
+  },
+  {
+    "product_name": "Sivo 160",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Dynasylan Sivo"
+    ],
+    "composition_zh": "氨基/烷基矽烷",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 0,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.02,
+      "ph_value": "4-4.6",
+      "flash_point": "N/A",
+      "boiling_point": "N/A"
+    },
+    "properties": "N/A"
+  },
+  {
+    "product_name": "Sivo 210",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Dynasylan Sivo"
+    ],
+    "composition_zh": "雙氨基/烷基矽烷",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 1,
+      "comonomer": 0,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 0.97,
+      "ph_value": "11-11.3",
+      "flash_point": 95,
+      "boiling_point": "240"
+    },
+    "properties": "N/A"
+  },
+  {
+    "product_name": "Sivo 214",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Dynasylan Sivo"
+    ],
+    "composition_zh": "N/A",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 1,
+      "chemical_synthesis": 1,
+      "comonomer": 0,
+      "crosslinking_agent": 1,
+      "surface_modifier": 1
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 0.95,
+      "ph_value": "11",
+      "flash_point": 90,
+      "boiling_point": "68"
+    },
+    "properties": "N/A"
+  },
+  {
+    "product_name": "Sivo 560",
+    "brand_code": "Dorf Ketal",
+    "featured_categories": [
+      "Dynasylan Sivo"
+    ],
+    "composition_zh": "N/A",
+    "system": {
+      "solvent_borne": false,
+      "waterborne": false,
+      "uv_coatings_and_inks": false,
+      "powder_coating": false
+    },
+    "applications": {
+      "adhesion_promoter": 0,
+      "chemical_synthesis": 0,
+      "comonomer": 0,
+      "crosslinking_agent": 0,
+      "surface_modifier": 0
+    },
+    "typical_properties": {
+      "density_g_cc_25c": 1.01,
+      "ph_value": "N/A",
+      "flash_point": 34,
+      "boiling_point": "142"
+    },
+    "properties": "N/A"
+  }
+]

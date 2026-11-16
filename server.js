@@ -467,6 +467,9 @@ async function appendToGoogleSheet(data, pdfBuffer, pdfFilename) {
             sampleSent: '',
             quoted: '',
             owner: '',
+            phone: data.phone || data.mobile || '',
+            fax: data.fax || '',
+            address: data.address || '',
             internalNote: '',
             pdfBase64: pdfBuffer ? Buffer.from(pdfBuffer).toString('base64') : '',
             pdfFileName: pdfFilename || `${data.company || '客戶'}_樣品申請單.pdf`

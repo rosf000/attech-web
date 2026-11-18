@@ -227,6 +227,37 @@ app.get('/json/:brand/:file', (req, res, next) => {
     }
 });
 
+// ----------------------------------------------------
+// 1.5 資安防護：阻擋內部機敏目錄與檔案直接對外暴露
+// (完全不影響 GA4 追蹤、前端 JS/CSS/圖片、/json/ 及 TDS PDF 下載)
+// ----------------------------------------------------
+app.use((req, res, next) => {
+    let rawPath = req.path || '';
+    try {
+        rawPath = decodeURIComponent(rawPath);
+    } catch (e) {
+        // 若帶有畸形 URL 編碼直接忽略或使用原始 path
+    }
+    const lowerPath = rawPath.toLowerCase();
+
+    // 1. 阻擋內部稽核、歷史歸檔、指令檔與工作目錄
+    if (/^\/(_archive|gsc|audit|scripts|\.agents|\.idea|scratch|analysis report)/i.test(lowerPath)) {
+        return res.status(403).type('text/plain').send('403 Forbidden: Access to internal directory is prohibited.');
+    }
+
+    // 2. 阻擋機敏檔案類型（.xlsx, .zip, .bat, .bak, .log, .env）
+    if (/\.(xlsx|xls|zip|bak|bat|log|env)$/i.test(lowerPath)) {
+        return res.status(403).type('text/plain').send('403 Forbidden: File type is not accessible.');
+    }
+
+    // 3. 阻擋專案根目錄敏感設定檔
+    if (/^\/(package\.json|package-lock\.json|config\.json|product_erp_map\.json|server\.js|lambda\.js)$/i.test(lowerPath)) {
+        return res.status(403).type('text/plain').send('403 Forbidden: System file is protected.');
+    }
+
+    next();
+});
+
 app.use(express.static(path.join(__dirname), {
     maxAge: '1d',
     setHeaders: (res, filePath) => {

@@ -10,6 +10,41 @@
     <title>404 - 找不到網頁 | 宏威應用材料 ATTech Materials</title>
     <meta name="robots" content="noindex, follow">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <!-- 最佳化第三方資源預連線 (Preconnect) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+    <!-- Google tag (gtag.js) - Google Analytics 4 (GA4) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        (function () {
+            var hostname = window.location.hostname;
+            var isLocal = ['localhost', '127.0.0.1', ''].indexOf(hostname) !== -1 ||
+                window.location.protocol === 'file:' ||
+                hostname.endsWith('.local') ||
+                /^(192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.)/.test(hostname);
+            if (isLocal) {
+                window['ga-disable-G-RC6CHE673V'] = true;
+                console.log('[GA4] 本地開發環境，已自動停用 Google Analytics 追蹤 (G-RC6CHE673V)');
+                return;
+            }
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RC6CHE673V';
+            document.head.appendChild(script);
+            gtag('js', new Date());
+            gtag('config', 'G-RC6CHE673V', {
+                'page_title': '404 - 找不到網頁'
+            });
+        })();
+    </script>
+
     <link rel="stylesheet" href="/css/output.css?v=20261109_v2">
     <link rel="stylesheet" href="/css/style.css?v=20261109_v2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
